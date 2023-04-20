@@ -55,16 +55,41 @@ export const QUERY_USER = gql`
       lastName
       orders {
         _id
-        purchaseDate
-        products {
-          _id
-          name
-          description
-          price
-          quantity
-          image
+          purchaseDate
+          products {
+            _id
+            name
+            description
+            price
+            quantity
+            image
         }
       }
     }
   }
 `;
+
+export const GET_ALL_POSTS = gql`
+  {
+    getAllPosts {
+      id
+      body
+      createdAt
+      username
+      likeCount
+      likes {
+        username
+      }
+      commentCount
+      comments {
+        id
+        username
+        createdAt
+        body
+      }
+    }
+  }
+`;
+
+
+

@@ -18,12 +18,19 @@ const userSchema = new Schema({
   email: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
+    match: [/.+@.+\..+/, 'Must use a valid email address']
   },
   password: {
     type: String,
     required: true,
     minlength: 5
+  },
+  username:{
+    typeKey: String,
+  },
+  createdAt:{
+    typeKey: String,
   },
   orders: [Order.schema]
 });
