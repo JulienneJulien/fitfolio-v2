@@ -3,9 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {
   ApolloClient,
   InMemoryCache,
-  ApolloProvider,
   createHttpLink,
+  ApolloProvider,
 } from '@apollo/client';
+// import { ApolloProvider} from '@apollo/react-hooks'
 import { setContext } from '@apollo/client/link/context';
 
 import Home from './pages/Home';
@@ -17,6 +18,8 @@ import Nav from './components/Nav';
 import { StoreProvider } from './utils/GlobalState';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
+import Exercise from './pages/Exercise';
+import FitShop from './pages/FitShop';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -60,6 +63,14 @@ function App() {
               <Route 
                 path="/success" 
                 element={<Success />} 
+              />
+              <Route 
+                path="/exercise" 
+                element={<Exercise/>} 
+              />
+                <Route 
+                path="/fitshop" 
+                element={<FitShop/>} 
               />
               <Route 
                 path="/orderHistory" 

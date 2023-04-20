@@ -1,10 +1,17 @@
-const { AuthenticationError } = require('apollo-server-express');
-const { User, Product, Category, Order } = require('../models');
+const { AuthenticationError, UserInputError } = require('apollo-server-express');
+const { User, Product, Category, Order, Post } = require('../models');
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 const resolvers = {
   Query: {
+    getAllPosts: async () => { 
+      return await Post.find();
+    },
+    getPost: async (_, {postId}) => {
+      return await Post.findById(postId);
+    },
+   
     categories: async () => {
       return await Category.find();
     },
@@ -90,6 +97,97 @@ const resolvers = {
     }
   },
   Mutation: {
+    async createPost(_, { body} , user, args, username, context){
+    
+      const newPost = new Post({
+        body,
+        user:user.id,
+        username:user.username,
+        createdAt: new Date().toDateString()
+      });
+      const post = await newPost.save();
+      return post;
+    },
+    deletePost: async (_, {postId}, user, username, context) => {
+      const post = await Post.findById(postId);
+      if(user.username === post.username) {
+        await Post.findByIdAndDelete(postId, user)
+        return "You have successfully deleted this post";
+      } else {
+     throw Error('No post was found')
+      } 
+    },
+
+    updatePost: async (parent, args, user,username) => {
+      const {postId} = args
+      const {body} = args.post;
+      const updates = {}
+      if (body !== undefined) {
+        updates.body = body;
+      }
+      const post = await Post.findByIdAndUpdate(postId,
+        updates,
+        {new: true}
+        );
+      return post;
+    },
+  
+
+    createComment: async (_, {postId, body, username}, context) => {
+      if (body.trim() === '') {
+        throw new UserInputError('Invalid comment')
+    }
+    const post = await Post.findByIdAndUpdate(postId);
+      if(post){
+        post.comments.unshift({
+            body,
+            username,
+            createdAt: new Date().toDateString(),
+        })
+        await post.save();
+        return post;
+      }else throw new UserInputError('No post was found')
+  },
+
+
+  deleteComment: async (_, {postId, commentId, username}, context) => {
+
+  const post = await Post.findById(postId);
+    if(post){
+      const commentIndex = post.comments.findIndex(c => c.id === commentId);
+      if(post.comments[commentIndex].username === username) {
+        post.comments.splice(commentIndex, 1)
+        await post.save();
+        return post;
+      } else {
+        throw new AuthenticationError('No action allowed');
+    } 
+  }else {
+      throw new UserInputError('No post was found');
+    }   
+},
+
+likePost: async (_, {postId, username}, context) => {
+
+  const post = await Post.findById(postId);
+    if(post) {
+      if(post.likes.find(like => like.username === username)) {
+        // POST has already received likes but, was unliked
+          post.likes = post.likes.filter(like => like.username !== username);
+      } else {
+        post.likes.push({
+          username,
+          createdAt: new Date().toDateString(),
+        });
+      } 
+        await post.save();
+        return post;
+      } else
+          throw new UserInputError('No post was found');
+
+},
+
+
     addUser: async (parent, args) => {
       const user = await User.create(args);
       const token = signToken(user);
@@ -136,6 +234,7 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
+
     }
   }
 };
