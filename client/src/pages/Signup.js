@@ -44,8 +44,8 @@ function Signup(props) {
           <h3 className="mb-8 text-4xl md:text-5xl font-bold font-heading">Signing up with FitFolio is super quick!</h3>
           <p className="mb-10 font-semibold font-heading">Let's get started!</p>
           <form onSubmit= {handleFormSubmit} action="">
-            <input className="w-full mb-6 px-12 py-6 border border-gray-200 focus:ring-red-300 focus:border-red-300 rounded-md" type="text" placeholder="steven@example.dev"/>
-            <input className="w-full mb-6 px-12 py-6 border border-gray-200 focus:ring-red-300 focus:border-red-300 rounded-md" type="password" placeholder="Password" name="password" type="password" id="password" onChange={handleChange}/>
+            <input className="w-full mb-6 px-12 py-6 border border-gray-200 focus:ring-red-300 focus:border-red-300 rounded-md" placeholder="steven@example.dev"name="email"type="email" id="email"/>
+            <input className="w-full mb-6 px-12 py-6 border border-gray-200 focus:ring-red-300 focus:border-red-300 rounded-md" type="password" placeholder="Password" name="password" id="pwd" onChange={handleChange}/>
             <label className="flex" for="">
               <input className="mr-4 mt-1" type="checkbox"/>
               <span className="text-sm">By singning up, you agree to our Terms, Data Policy and Cookies.</span>
@@ -61,10 +61,6 @@ function Signup(props) {
 }
 
 export default Signup;
-
-
-
-
 
 {/* <div className="container my-1">
 <Link to="/login">← Go to Login</Link>
