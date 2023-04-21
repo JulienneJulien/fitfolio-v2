@@ -4,6 +4,11 @@ import {GET_ALL_POSTS} from '../utils/queries';
 import {Grid, Transition} from 'semantic-ui-react';
 import PostCard from '../components/PostCard/index';
 import spinner from '../assets/spinner.gif';
+import Auth from "../utils/auth";
+import Signup from "./Signup";
+import Login from "./Login";
+
+
 // import PostForm from '../components/PostForm';
 
 function Home() {
@@ -22,6 +27,7 @@ function Home() {
   //   data: { getAllPosts: posts }
   // } = useQuery(GET_ALL_POSTS);
 
+  if (Auth.loggedIn()) {
   return (
 
     // <div>HI</div>
@@ -43,7 +49,11 @@ function Home() {
     </Grid.Row>
   </Grid>
   );
-}
+        }
+        return (
+        <Login/>
+        )
+  }
 
 
 export default Home
