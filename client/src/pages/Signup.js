@@ -5,11 +5,12 @@ import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
 
 function Signup(props) {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [formState, setFormState] = useState({ firstName: '', lastName: '', email: '', password: '' });
   const [addUser] = useMutation(ADD_USER);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+    console.log("Form State Goes Here", formState)
     const mutationResponse = await addUser({
       variables: {
         email: formState.email,
@@ -18,6 +19,7 @@ function Signup(props) {
         lastName: formState.lastName,
       },
     });
+    console.log("MUTATION RESPONSE", mutationResponse)
     const token = mutationResponse.data.addUser.token;
     Auth.login(token);
   };
@@ -44,7 +46,9 @@ function Signup(props) {
           <h3 className="mb-8 text-4xl md:text-5xl font-bold font-heading">Signing up with FitFolio is super quick!</h3>
           <p className="mb-10 font-semibold font-heading">Let's get started!</p>
           <form onSubmit= {handleFormSubmit} action="">
-            <input className="w-full mb-6 px-12 py-6 border border-gray-200 focus:ring-red-300 focus:border-red-300 rounded-md" placeholder="steven@example.dev"name="email"type="email" id="email"/>
+            <input className="w-full mb-6 px-12 py-6 border border-gray-200 focus:ring-red-300 focus:border-red-300 rounded-md" placeholder="First Name" name="firstName" type="firstName" id="firstName" onChange={handleChange}/>
+            <input className="w-full mb-6 px-12 py-6 border border-gray-200 focus:ring-red-300 focus:border-red-300 rounded-md" placeholder="Last Name" name="lastName" type="lastName" id="lastName" onChange={handleChange}/>
+            <input className="w-full mb-6 px-12 py-6 border border-gray-200 focus:ring-red-300 focus:border-red-300 rounded-md" placeholder="steven@example.dev"name="email"type="email" id="email" onChange={handleChange}/>
             <input className="w-full mb-6 px-12 py-6 border border-gray-200 focus:ring-red-300 focus:border-red-300 rounded-md" type="password" placeholder="Password" name="password" id="pwd" onChange={handleChange}/>
             <label className="flex" for="">
               <input className="mr-4 mt-1" type="checkbox"/>
