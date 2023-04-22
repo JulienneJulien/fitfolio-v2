@@ -1,29 +1,31 @@
 import React, {useState} from 'react'
 import { Segment} from 'semantic-ui-react'
-import video from '../assets/welcomeVid.mp4'
+
+
+import Exercises from '../components/Exercise/Exercises'
+import HeroBanner from '../components/Exercise/HeroBanner'
+import SearchExercises from '../components/Exercise/SearchExercises'
 import '../styles/Exercise.css'
-function Exercise() {
+
+
+
+function ExerciseHome() {
 
 
   return (
-   <Segment>
-    <HeroBanner/>
-    <SearchExercises/>
-    <Exercises/>
-    </Segment> 
+    <div className='exerciseHome'>
+      <Segment >
+        <HeroBanner/>
+        <SearchExercises/>
+        <Exercises/>
+        </Segment> 
 
-
-
-    <Segment basic placeholder >
-      <video autoPlay loop muted>
-      <source src={video} type="video/mp4"/>
-     </video> 
-      </Segment>
-
+       
+    </div>
    
 
 
   )
 }
 
-export default Exercise;
+export default ExerciseHome;

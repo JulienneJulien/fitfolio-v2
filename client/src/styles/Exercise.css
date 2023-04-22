@@ -8,3 +8,7 @@
 .ui.basic.placeholder.segment {
     padding: 0;
 }
+
+body , div.ui.basic.placeholder.segment {
+    background:  rgb(183, 153, 106);
+}

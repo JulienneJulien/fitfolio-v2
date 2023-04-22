@@ -18,7 +18,7 @@ import Nav from './components/Nav';
 import { StoreProvider } from './utils/GlobalState';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
-import Exercise from './pages/Exercise';
+import ExerciseHome from './pages/ExerciseHome';
 import FitShop from './pages/FitShop';
 
 const httpLink = createHttpLink({
@@ -66,7 +66,7 @@ function App() {
               />
               <Route 
                 path="/exercise" 
-                element={<Exercise/>} 
+                element={<ExerciseHome/>} 
               />
                 <Route 
                 path="/fitshop" 
