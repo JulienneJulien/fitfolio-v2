@@ -1,59 +1,40 @@
-import React from 'react'
-import { useQuery } from '@apollo/client'
-import {GET_ALL_POSTS} from '../utils/queries';
-import {Grid, Transition} from 'semantic-ui-react';
-import PostCard from '../components/PostCard/index';
-import spinner from '../assets/spinner.gif';
+import React, {useState} from 'react'
+import { Segment} from 'semantic-ui-react'
+
 import Auth from "../utils/auth";
 import Signup from "./Signup";
 import Login from "./Login";
+import Exercises from '../components/Exercise/Exercises'
+import HeroBanner from '../components/Exercise/HeroBanner'
+import SearchExercises from '../components/Exercise/SearchExercises'
+import '../styles/Exercise.css'
 
 
-// import PostForm from '../components/PostForm';
 
-function Home() {
-  const {data,loading,error,posts} = useQuery(GET_ALL_POSTS);
-  if (loading) {
-      return  <img src={spinner} alt="loading" /> 
-  }
-  if (data) {
-      console.log(data);
-  }
-  if (error) {
-      console.log(error);
-  }
-  // const {
-  //   loading,
-  //   data: { getAllPosts: posts }
-  // } = useQuery(GET_ALL_POSTS);
+function ExerciseHome() {
 
   if (Auth.loggedIn()) {
   return (
+    <div className='exerciseHome'>
+      <Segment >
+        <HeroBanner/>
+        <SearchExercises/>
+        <Exercises/>
+        </Segment> 
 
-    // <div>HI</div>
-    <Grid columns={3}>
-    <Grid.Row className="page-title">
-      <h1 style={{margin: "auto"}}>Recent Posts</h1>
-    </Grid.Row>
-    <Grid.Row>
-      {loading ? (
-        <h1>Loading posts..</h1>
-      ) : (
-        data &&
-        data.getAllPosts.map((post) => (
-          <Grid.Column key={post.id} style={{ marginBottom: 20 }}>
-            <PostCard post={post} />
-          </Grid.Column>
-        ))
-      )}
-    </Grid.Row>
-  </Grid>
-  );
-        }
-        return (
-        <Login/>
-        )
-  }
+       
+    </div>
+   
 
 
-export default Home
+  )
+}
+return (
+  <Login/>
+  )
+}
+
+
+export default ExerciseHome;
+
+

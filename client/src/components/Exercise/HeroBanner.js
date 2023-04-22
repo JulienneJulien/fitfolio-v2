@@ -13,7 +13,7 @@ function HeroBanner() {
   React.useEffect(() => {
     const typed = new Typed(title.current, {
       strings: ['Having trouble getting back into a fitness routine lately? '],
-      typeSpeed: 90,
+      typeSpeed: 10,
       loop: false,
     });
 
@@ -27,7 +27,7 @@ function HeroBanner() {
 
   React.useEffect(() => {
     const typed = new Typed(quote.current, {
-      strings: ['(Nice to see you here!)'],
+      strings: ['TRACK' , 'GROW' , 'COMPETE'],
       typeSpeed: 100,
       loop: true,
     });
@@ -42,6 +42,12 @@ function HeroBanner() {
     <Segment basic placeholder >
         <Header className='introHome'> Welcome To FitFolio</Header> 
         <span className='spanHome'  ref={ title} />
+
+        <Header as='h1' className='quote'> LET US 
+        <span className='codeMessage'> console.log</span><span className='spanHome2' ref={quote} />
+        </Header>
+
+
         <Grid celled>
     <Grid.Row>
       <Grid.Column width={3}>
@@ -67,9 +73,7 @@ function HeroBanner() {
     </Grid.Row>
   </Grid>
           {/* <Image className='runner' src={Runner}  width="350" height="350" alt="logo"  /> */}
-        <Header as='h1' className='quote'>'“test”  
-        <span className='codeMessage'> console.log</span><span className='spanHome2' ref={quote} />
-        </Header>
+       
   
 
             {/* <img className='icon' src={Logo}  width="750" height="800" alt="logo"  /> */}
