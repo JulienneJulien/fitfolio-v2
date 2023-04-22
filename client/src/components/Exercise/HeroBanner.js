@@ -8,21 +8,6 @@ import Typed from "typed.js";
 
 function HeroBanner() {
 
-  const title = React.useRef(null);
-
-  React.useEffect(() => {
-    const typed = new Typed(title.current, {
-      strings: ['Having trouble getting back into a fitness routine lately? '],
-      typeSpeed: 10,
-      loop: false,
-    });
-
-    return () => {
-     
-      typed.destroy();
-    };
-  }, []);
-
   const quote = React.useRef(null);
 
   React.useEffect(() => {
@@ -41,10 +26,12 @@ function HeroBanner() {
   return (
     <Segment basic placeholder >
         <Header className='introHome'> Welcome To FitFolio</Header> 
-        <span className='spanHome'  ref={ title} />
+        {/* <span className='spanHome'  ref={ title} /> */}
 
-        <Header as='h1' className='quote'> LET US 
-        <span className='codeMessage'> console.log</span><span className='spanHome2' ref={quote} />
+        <Header as='h1' className='quote'><span className='spanHome'>Having trouble getting back into a fitness routine lately?</span></Header>
+
+        <Header as='h1' className='quote'> 
+        <span className='codeMessage'> Let us </span><span className='spanHome2' ref={quote} />
         </Header>
 
 

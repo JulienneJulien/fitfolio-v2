@@ -25,24 +25,16 @@ body , h1.ui.header.quote::before, div.ui.basic.placeholder.segment {
     text-align: center;
 }
 
-.spanHome {
-    color: #d9dcd6;
-    font-size: 35px; 
-    font-weight: bold;
-    font-family:  'Helvetica Neue', sans-serif;
-    letter-spacing: -1px; 
-    line-height: 2; 
-    text-align: center;
-    text-shadow: 0 0 10px #3f2e09;
+h1.ui.header.quote::before {
+    margin-bottom: 0;
 }
 
-.spanHome2 {
+.spanHome2 , .codeMessage, .quote, .spanHome {
     color: #d9dcd6;
     font-size: 35px; 
     font-weight: bold;
     font-family:  'Helvetica Neue', sans-serif;
     letter-spacing: -1px; 
-    line-height: 2; 
     text-align: center;
     text-shadow: 0 0 10px #3f2e09;
 }
