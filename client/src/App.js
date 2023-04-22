@@ -20,6 +20,7 @@ import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
 import ExerciseHome from './pages/ExerciseHome';
 import FitShop from './pages/FitShop';
+import Contact from './pages/Contact'
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -71,6 +72,10 @@ function App() {
                 <Route 
                 path="/fitshop" 
                 element={<FitShop/>} 
+              />
+              <Route 
+                path="/contact" 
+                element={<Contact />} 
               />
               <Route 
                 path="/orderHistory" 
