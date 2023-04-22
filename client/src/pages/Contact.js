@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { validateEmail } from '../utils/helpers';
-import "../styles/contact.css";
+import "../styles/Contact.css";
 
 function Contact() {
 
@@ -51,7 +51,7 @@ function Contact() {
               </div>
               <div>
                   <label htmlFor="message">Message:</label>
-                  <textarea class="form-control" name="message" defaultValue={message} onBlur={handleChange} rows="7" />
+                  <textarea class="form-control" type="text" name="message" defaultValue={message} onBlur={handleChange} cols="50" rows="7" />
               </div> 
               <div/>
               {error && (
