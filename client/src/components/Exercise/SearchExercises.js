@@ -6,12 +6,30 @@ import { exerciseOptions, fetchData } from '../../utils/helpers'
 function SearchExercises() {
 
     const [search, setSearch] =useState('')
+    const [exercises,setExercises] = useState([])
+    const [body, setBodyParts] = useState([])
+
+    useEffect(() => {
+        const fetchExercisesDetails = async () => {
+          const bodyParts = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList',exerciseOptions );
+
+          setBodyParts(['all', ...bodyParts]);
+        }
+
+        fetchExercisesDetails();
+    },[])
 
     const handleSearch = async () => {
         if (search) {
           const exerciseDetails = await fetchData('https://exercisedb.p.rapidapi.com/exercises/',exerciseOptions );
 
-          console.log(exerciseDetails)
+          const searchedResults = exerciseDetails.filter(
+            (exercise) => exercise.name.toLowerCase().includes(search)
+            ||exercise.target.toLowerCase().includes(search)  ||exercise.equipment.toLowerCase().includes(search)  ||exercise.bodyPart.toLowerCase().includes(search)
+          )
+
+          setSearch('');
+          setExercises(searchedResults);
         }
     }
 
