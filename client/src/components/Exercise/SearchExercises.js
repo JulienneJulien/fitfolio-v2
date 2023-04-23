@@ -5,6 +5,12 @@ function SearchExercises() {
 
     const [search, setSearch] =useState('')
 
+    const handleSearch = async () => {
+        // if (search) {
+        //   const exercisesDetails = await fetchData();
+        // }
+    }
+
   return (
    <Stack alignItems='center'>
     <Typography color='#232F3E'  fontWeight={800} fontSize="30px" mt="90px"  mb={3} alignItems="center" justifyContent="center" p='20px'>
@@ -28,7 +34,11 @@ function SearchExercises() {
         color: '#fff',
         textTransform: 'none',
         width: {lg: '175px', xs: '80px'}, fontSize: {lg:'20px', xs: '14px'},
-        height:'55px', position:'absolute',right: '0'  }}>Search</Button>
+        height:'55px', position:'absolute',right: '0'  }}
+        
+          onClick={handleSearch}
+
+        >Search</Button>
 
       </Box>
 
