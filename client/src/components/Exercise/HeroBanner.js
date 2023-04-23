@@ -51,7 +51,11 @@ function HeroBanner() {
           <Typography color='#232F3E' textAlign="left" fontWeight={800} fontSize="25px">Consistency is essential for fitness success!
             The most important thing is to stay consistent no matter what activity you choose. Before you see any results, you have to do it over and over again.
 
-            Our fitness motivation starts strong, but we soon slack off. It's important to develop a fitness routine that develops habits.</Typography> */}
+            Our fitness motivation starts strong, but we soon slack off. It's important to develop a fitness routine that develops habits.
+            
+            “Motivation gets you started. Habit keeps you going.”Get started Now!
+            
+            </Typography> */}
 
             
 
