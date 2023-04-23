@@ -4,10 +4,9 @@ import { exerciseOptions, fetchData } from '../../utils/helpers'
 import HorizontalScrollbar from './HorizontalScrollbar'
 
 
-function SearchExercises() {
+function SearchExercises({setExercises, bodyPartCard, setBodyPartCards }) {
 
     const [search, setSearch] =useState('')
-    const [exercises,setExercises] = useState([])
     const [bodyParts, setBodyParts] = useState([])
 
     useEffect(() => {
@@ -65,7 +64,8 @@ function SearchExercises() {
 
       </Box>
       <Box sx={{postion: 'relative', width: '100%', p: '20px' }} >
-          <HorizontalScrollbar data={bodyParts}/>
+          <HorizontalScrollbar data={bodyParts}
+          bodyPartCard={bodyPartCard} setBodyPartCards={setBodyPartCards}/>
       </Box>
 
    </Stack>

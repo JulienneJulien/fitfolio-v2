@@ -2,7 +2,7 @@ import React from 'react'
 import {Box} from '@mui/material'
 import BodyPartCard from './BodyPartCard'
 
-function HorizontalScrollbar({data}) {
+function HorizontalScrollbar({data, bodyPartCard, setBodyPartCards}) {
   return (
     <div>
             {data.map((item) => (
@@ -12,7 +12,9 @@ function HorizontalScrollbar({data}) {
                     title={item.id|| item}
                     m= '0 40px'   
                     >
-                       {item} 
+                      <BodyPartCard item={item} bodyPartCard=
+                      {bodyPartCard} setBodyPartCards=
+                      {setBodyPartCards}/>
               </Box>
             )
         )}

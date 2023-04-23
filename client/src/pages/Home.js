@@ -13,14 +13,24 @@ import {Box} from '@mui/material'
 
 
 function ExerciseHome() {
+  const [bodyPartCard, setBodyPartCards] =useState('all');
+  const [exercises,setExercises] = useState([]);
 
   if (Auth.loggedIn()) {
   return (
     <Box className='exerciseHome'>
       {/* <Segment > */}
         <HeroBanner/>
-        <SearchExercises/>
-        <Exercises/>
+        <SearchExercises 
+          setExercises={setExercises} 
+          bodyPartCard={bodyPartCard}
+          setBodyPartCards={setBodyPartCards}
+          />
+        <Exercises 
+          setExercises={setExercises} 
+          bodyPartCard={bodyPartCard} 
+          setBodyPartCards={setBodyPartCards}
+          />
         {/* </Segment>  */}
 
        
