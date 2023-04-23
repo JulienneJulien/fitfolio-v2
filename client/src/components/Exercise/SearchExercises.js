@@ -2,6 +2,9 @@ import React, {useEffect, useState} from 'react'
 import {Box, Typography, TextField, Stack ,Button} from '@mui/material'
 
 function SearchExercises() {
+
+    const [search, setSearch] =useState('')
+
   return (
    <Stack alignItems='center'>
     <Typography color='#232F3E'  fontWeight={800} fontSize="30px" mt="90px"  mb={3} alignItems="center" justifyContent="center" p='20px'>
@@ -13,10 +16,10 @@ function SearchExercises() {
             fontWeight:'800', 
             border: 'none', 
             borderRadius:'15px'},
-           width: { lg: '800px', xs: '350px'},
-           backgroundColor: '#d9dcd6'
+            width: { lg: '800px', xs: '350px'},
+            backgroundColor: '#d9dcd6'
           }}
-        height="76px" value="" onChange={(e) => {}} placeholder="Search Exercises Here" type="text"/>
+        height="76px" value={search} onChange={(element) => setSearch(element.target.value.toLowerCase())} placeholder="Search Exercises Here" type="text"/>
 
        
        <Button variant='contained' color='error' className='searchBtn' 
