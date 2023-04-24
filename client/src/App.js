@@ -10,6 +10,7 @@ import {
 import { setContext } from '@apollo/client/link/context';
 
 import Home from './pages/Home';
+import ExerciseDetails from './pages/ExerciseDetails';
 import Detail from './pages/Detail';
 import NoMatch from './pages/NoMatch';
 import Login from './pages/Login';
@@ -52,6 +53,10 @@ function App() {
               <Route 
                 path="/" 
                 element={<Home />} 
+              />
+                <Route 
+                path="/exercise/:id" 
+                element={<ExerciseDetails />} 
               />
               <Route 
                 path="/login" 
