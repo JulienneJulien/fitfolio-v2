@@ -2,8 +2,9 @@ import React from 'react'
 import {Box} from '@mui/material'
 import BodyPartCard from './BodyPartCard'
 import {MdChevronLeft, MdChevronRight} from 'react-icons/md'
+import ExerciseCard from './ExerciseCard'
 
-function HorizontalScrollbar({data, bodyPartCard, setBodyPartCards}) {
+function HorizontalScrollbar({data, bodyPartCard, setBodyPartCards,isBodyParts }) {
 
   const slideLeft = () => {
     var slider = document.getElementById('slider')
@@ -27,9 +28,11 @@ function HorizontalScrollbar({data, bodyPartCard, setBodyPartCards}) {
                     title={item.id|| item}
                     m= '0 40px'   
                     >
-                      <BodyPartCard item={item} bodyPartCard=
+                      {isBodyParts ? <BodyPartCard item={item} bodyPartCard=
                       {bodyPartCard} setBodyPartCards=
                       {setBodyPartCards}/>
+                      : <ExerciseCard exercise={item} />
+                    }
               </Box>
             )
         )}  

@@ -16,6 +16,8 @@ function ExerciseHome() {
   const [bodyPartCard, setBodyPartCards] =useState('all');
   const [exercises,setExercises] = useState([]);
 
+console.log(bodyPartCard)
+
   if (Auth.loggedIn()) {
   return (
     <Box className='exerciseHome'>
@@ -27,9 +29,9 @@ function ExerciseHome() {
           setBodyPartCards={setBodyPartCards}
           />
         <Exercises 
+          exercises={exercises}
           setExercises={setExercises} 
           bodyPartCard={bodyPartCard} 
-          setBodyPartCards={setBodyPartCards}
           />
         {/* </Segment>  */}
 
