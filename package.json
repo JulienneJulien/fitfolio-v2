@@ -15,5 +15,9 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.1.0"
+  },
+  "dependencies": {
+    "dependencies": "^0.0.1",
+    "legacy": "^0.0.3"
   }
 }
