@@ -8,6 +8,8 @@ import SimiliarExercises from '../components/Exercise/SimiliarExercises'
 
 function ExerciseDetails() {
    const [exerciseDetail, setExerciseDetail] = useState({});
+   const [targetMuscleExercises, setTargetMuscleExercises] =useState({});
+   const [equipmentExercises, setEquipmentExercises] =useState({});
    const {id} = useParams();
 
    useEffect(() => {
@@ -15,6 +17,12 @@ function ExerciseDetails() {
         const exerciseDbUrl= 'https://exercisedb.p.rapidapi.com'
         const exerciseDetailData = await fetchData(`${exerciseDbUrl}/exercises/exercise/${id}`, exerciseOptions);
         setExerciseDetail(exerciseDetailData);
+
+        const targetMuscleExercisesData = await fetchData(`${exerciseDbUrl}/exercises/target/${exerciseDetailData.target}`, exerciseOptions);
+        setTargetMuscleExercises(targetMuscleExercisesData);
+
+        const equipmentExercisesData = await fetchData(`${exerciseDbUrl}/exercises/equipment/${exerciseDetailData.equipment}`, exerciseOptions);
+        setEquipmentExercises(equipmentExercisesData);
     }
     fetchExerciseDetails();
    }, [id]);
@@ -22,7 +30,7 @@ function ExerciseDetails() {
   return (
     <Box>
         <Detail exerciseDetail={exerciseDetail}/>
-        <SimiliarExercises/>
+        <SimiliarExercises targetMuscleExercises={targetMuscleExercises} equipmentExercises={equipmentExercises}/>
     </Box>
   )
 }

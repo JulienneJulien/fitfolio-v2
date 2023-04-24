@@ -65,7 +65,7 @@ function SearchExercises({setExercises, bodyPartCard, setBodyPartCards }) {
       </Box>
       <Box sx={{postion: 'relative', width: '100%', p: '20px' }} >
           <HorizontalScrollbar data={bodyParts}
-          bodyPartCard={bodyPartCard} setBodyPartCards={setBodyPartCards}/>
+          bodyPartCard={bodyPartCard} setBodyPartCards={setBodyPartCards} isBodyParts />
       </Box>
 
    </Stack>
