@@ -67,8 +67,7 @@ export const exerciseOptions = {
       'content-type': 'application/octet-stream',
       'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com',
       'X-RapidAPI-Key': '5882a533d5msh8b84b8bf9e36f2cp1b6d3bjsneae6d704ae42'
-      // process.env.
-      // REACT_APP_RAPID_API_KEY
+      // process.env.REACT_APP_RAPID_API_KEY
     },
 }
 
