@@ -4,26 +4,26 @@ import { exerciseOptions, fetchData } from '../../utils/helpers'
 import HorizontalScrollbar from './HorizontalScrollbar'
 
 
-function SearchExercises({setExercises, bodyPart, setBodyPart }) {
+function SearchExercises({setExercises, bodyPartCard, setBodyPartCards }) {
 
     const [search, setSearch] =useState('')
     const [bodyParts, setBodyParts] = useState([])
 
     useEffect(() => {
-        const fetchExercisesData = async () => {
-          const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList',exerciseOptions );
+        const fetchExercisesDetails = async () => {
+          const bodyParts = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList',exerciseOptions );
 
-          setBodyParts(['all', ...bodyPartsData]);
+          setBodyParts(['all', ...bodyParts]);
         }
 
-        fetchExercisesData();
+        fetchExercisesDetails();
     },[])
 
     const handleSearch = async () => {
         if (search) {
-          const exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises',exerciseOptions );
+          const exerciseDetails = await fetchData('https://exercisedb.p.rapidapi.com/exercises/',exerciseOptions );
 
-          const searchedResults = exercisesData.filter(
+          const searchedResults = exerciseDetails.filter(
             (exercise) => exercise.name.toLowerCase().includes(search)
             ||exercise.target.toLowerCase().includes(search)  ||exercise.equipment.toLowerCase().includes(search)  ||exercise.bodyPart.toLowerCase().includes(search)
           )
@@ -35,7 +35,7 @@ function SearchExercises({setExercises, bodyPart, setBodyPart }) {
 
   return (
    <Stack alignItems='center'>
-    <Typography color='#232F3E'  fontWeight={800} fontSize="30px" mt="30px"  mb={3} alignItems="center" justifyContent="center" p='20px'>
+    <Typography color='#232F3E'  fontWeight={800} fontSize="30px" mt="90px"  mb={3} alignItems="center" justifyContent="center" p='20px'>
       “Train insane or remain the same!"</Typography>
       
       <Box position='relative'>
@@ -47,7 +47,7 @@ function SearchExercises({setExercises, bodyPart, setBodyPart }) {
             width: { lg: '800px', xs: '350px'},
             backgroundColor: '#d9dcd6'
           }}
-        height="76px" value={search} onChange={(e) => setSearch(e.target.value.toLowerCase())} placeholder="Search Exercises Here" type="text"/>
+        height="76px" value={search} onChange={(element) => setSearch(element.target.value.toLowerCase())} placeholder="Search Exercises Here" type="text"/>
 
        
        <Button variant='contained' color='error' className='searchBtn' 
@@ -60,16 +60,12 @@ function SearchExercises({setExercises, bodyPart, setBodyPart }) {
         
           onClick={handleSearch}
 
-        >
-          Search
-        </Button>
+        >Search</Button>
 
       </Box>
       <Box sx={{postion: 'relative', width: '100%', p: '20px' }} >
           <HorizontalScrollbar data={bodyParts}
-          // bodyPart={bodyPart} setBodyPart={setBodyPart}
-          
-          />
+          bodyPartCard={bodyPartCard} setBodyPartCards={setBodyPartCards}/>
       </Box>
 
    </Stack>
