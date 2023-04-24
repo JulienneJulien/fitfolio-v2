@@ -11,7 +11,8 @@ function ExerciseCard({exercise}) {
                 <Button sx={{ml: '21px', 
                 color: '#b7996a', 
                 background: "#232F3E",
-                fontSize: '14px',
+                fontSize: '15px',
+                fontWeight: 'bold',
                 borderRadius: '50%',
                 textTransform: 'capitalize'}}>
                     {exercise.bodyPart}
@@ -20,10 +21,11 @@ function ExerciseCard({exercise}) {
                 <Button sx={{ml: '21px', 
                 color: '#232F3E', 
                 background: "#b7996a",
-                fontSize: '14px',
+                fontSize: '15px',
+                fontWeight: 'bold',
                 borderRadius: '50%',
                 textTransform: 'capitalize'}}>
-                    {exercise.targetMuscle}
+                    {exercise.target}
                 </Button>
                <Typography ml="21px" textTransform="capitalize" fontSize={20} fontWeight={800} pb="10px" color="#b7996a" mt="11px">
                     {exercise.name}
