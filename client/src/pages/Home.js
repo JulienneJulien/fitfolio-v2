@@ -16,6 +16,8 @@ function ExerciseHome() {
   const [bodyPartCard, setBodyPartCards] =useState('all');
   const [exercises,setExercises] = useState([]);
 
+console.log(bodyPartCard)
+
   if (Auth.loggedIn()) {
   return (
     <Box className='exerciseHome'>

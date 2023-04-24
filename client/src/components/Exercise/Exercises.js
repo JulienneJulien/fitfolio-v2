@@ -19,13 +19,27 @@ function Exercises({exercises, setExercises, bodyPartCard}) {
         window.scrollTo({top:1800, behavior:'smooth'})
       }
 
+
+      useEffect(() => {
+        const fetchExercisesDetails = async () => {
+          let exerciseDetails =[];
+
+          if (bodyPartCard === 'all') {
+            exerciseDetails = await fetchData('https://exercisedb.p.rapidapi.com/exercises/',exerciseOptions );
+          } else {
+            exerciseDetails = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPartCard}`,exerciseOptions );
+          }
+          setExercises(exerciseDetails);
+        }
+        fetchExercisesDetails();
+      }, [bodyPartCard]);
   return (
     <Box id="workouts"
       sx={{mt: {lg: '110px'}}}
       mt='50px'
       p="20px"
     >
-        <Typography mb="50px" fontSize={40} textAlign="center" fontWeight={550} color="#232F3E" >Workout Results</Typography>
+        <Typography mb="50px" fontSize={30} textAlign="center" fontWeight={550} color="#232F3E" >Workout Results</Typography>
     
       <Stack direction="row" 
           sx={{gap: {lg: '110px', xs: '50px'}}}
