@@ -43,3 +43,19 @@
 .bodyPartCards:hover {
     transform: scale(1.1, 1.1);
 }
+
+  /* .react-horizontal-scrolling-menu--wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  } */
+
+  @media screen and (max-width:1200px) {
+    .runner {
+        display: none;
+    }
+}
+
+/* .react-horizontal-scrolling-menu--scroll-container {
+    width: 500px;
+  } */

@@ -13,7 +13,7 @@ import {Box} from '@mui/material'
 
 
 function ExerciseHome() {
-  const [bodyPartCard, setBodyPartCards] =useState('all');
+  const [bodyPart, setBodyPart] =useState('all');
   const [exercises,setExercises] = useState([]);
 
   if (Auth.loggedIn()) {
@@ -23,13 +23,13 @@ function ExerciseHome() {
         <HeroBanner/>
         <SearchExercises 
           setExercises={setExercises} 
-          bodyPartCard={bodyPartCard}
-          setBodyPartCards={setBodyPartCards}
+          bodyPart={bodyPart}
+          setBodyPart={setBodyPart}
           />
         <Exercises 
           setExercises={setExercises} 
-          bodyPartCard={bodyPartCard} 
-          setBodyPartCards={setBodyPartCards}
+          bodyPart={bodyPart} 
+          setBodyPart={setBodyPart}
           />
         {/* </Segment>  */}
 

@@ -2,7 +2,8 @@ import React from 'react'
 import { Stack, Typography } from '@mui/material'
 import Icon from '../../assets/fit-icon.png'
 
-function BodyPartCard({ item, bodyPartCard, setBodyPartCards }) {
+
+function BodyPartCard({ item, bodyPart, setBodyPart }) {
   return (
       <Stack 
         type= "button" 
@@ -10,7 +11,7 @@ function BodyPartCard({ item, bodyPartCard, setBodyPartCards }) {
         justifyContent="center" 
         className='bodyPartCards' 
         sx={{
-            borderTop: bodyPartCard === item ? '4px solid #232F3E' : '',
+            borderTop: bodyPart === item ? '4px solid #232F3E' : '',
             backgroundColor: '#d9dcd6',
             borderBottomLeftRadius: '20px',
             width: '270px',
