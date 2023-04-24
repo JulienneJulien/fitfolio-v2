@@ -87,10 +87,21 @@ import Arrow2 from '../../assets/rightArrow.png'
 
 
 function HorizontalScrollbar({data, bodyPartCard, setBodyPartCards}) {
+
+  const slideLeft = () => {
+    var slider = document.getElementById('slider')
+    slider.scrollLeft = slider.scrollLeft - 500;
+  }
+
+  const slideRight = () => {
+    var slider = document.getElementById('slider')
+    slider.scrollLeft = slider.scrollLeft + 500;
+  }
+
   return (
     <div >
-     <MdChevronLeft size={40} className='left-arrow'/>
-      <div className='wrapper'>
+     <MdChevronLeft onClick={slideLeft} size={40} className='left-arrow'/>
+      <div className='wrapper' id='slider'>
      
             {data.map((item) => (
                 <Box
@@ -106,7 +117,7 @@ function HorizontalScrollbar({data, bodyPartCard, setBodyPartCards}) {
             )
         )}  
         </div>
-        <MdChevronRight size={40} className='right-arrow'/>
+        <MdChevronRight onClick={slideRight} size={40} className='right-arrow'/>
     </div>
   )
 }
