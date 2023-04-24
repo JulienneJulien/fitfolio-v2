@@ -40,6 +40,7 @@ function Contact() {
           <h2 className='titleNavsPage'>Contact</h2> 
           <p><b><i>Please contact us!</i></b></p>
 
+
           <form class=" flex-column justify-content-center" id="contact-form"   >
               <div>
                   <label htmlFor="name">Name:</label>
