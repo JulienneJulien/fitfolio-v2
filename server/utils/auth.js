@@ -4,6 +4,16 @@ const secret = 'mysecretsshhhhh';
 const expiration = '2h';
 
 module.exports = {
+
+  Post: {
+    likeCount(parent){;
+    console.log(parent);
+    return parent.likes.length;
+  },
+    commentCount: (parent) => parent.comments.length
+},
+
+
   authMiddleware: function ({ req }) {
     // allows token to be sent via req.body, req.query, or headers
     let token = req.body.token || req.query.token || req.headers.authorization;

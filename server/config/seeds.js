@@ -157,12 +157,14 @@ db.once('open', async () => {
   });
 
 
+
   await User.create({
     firstName: 'Julienne',
     lastName: 'Julien',
     email: 'juliennejulien15@gmail.com',
     password: 'password'
   });
+
 
 
   console.log('users seeded');

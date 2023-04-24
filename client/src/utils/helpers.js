@@ -5,6 +5,12 @@ export function pluralize(name, count) {
   return name + 's';
 }
 
+
+export function validateEmail(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
+
 export function idbPromise(storeName, method, object) {
   return new Promise((resolve, reject) => {
     const request = window.indexedDB.open('shop-shop', 1);
@@ -53,4 +59,22 @@ export function idbPromise(storeName, method, object) {
       };
     };
   });
+}
+
+export const exerciseOptions = {
+    method: 'GET',
+    headers: {
+      'content-type': 'application/octet-stream',
+      'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com',
+      'X-RapidAPI-Key': '5882a533d5msh8b84b8bf9e36f2cp1b6d3bjsneae6d704ae42'
+      // process.env.
+      // REACT_APP_RAPID_API_KEY
+    },
+}
+
+export const fetchData = async (url, options) => {
+  const response = await fetch(url, options);
+  const data = await response.json();
+
+  return data;
 }

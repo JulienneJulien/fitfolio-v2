@@ -1,49 +1,51 @@
-import React from 'react'
-import { useQuery } from '@apollo/client'
-import {GET_ALL_POSTS} from '../utils/queries';
-import {Grid, Transition} from 'semantic-ui-react';
-import PostCard from '../components/PostCard/index';
-import spinner from '../assets/spinner.gif';
-// import PostForm from '../components/PostForm';
+import React, {useState} from 'react'
+// import { Segment} from 'semantic-ui-react'
 
-function Home() {
-  const {data,loading,error,posts} = useQuery(GET_ALL_POSTS);
-  if (loading) {
-      return  <img src={spinner} alt="loading" /> 
-  }
-  if (data) {
-      console.log(data);
-  }
-  if (error) {
-      console.log(error);
-  }
-  // const {
-  //   loading,
-  //   data: { getAllPosts: posts }
-  // } = useQuery(GET_ALL_POSTS);
+import Auth from "../utils/auth";
+import Signup from "./Signup";
+import Login from "./Login";
+import Exercises from '../components/Exercise/Exercises'
+import HeroBanner from '../components/Exercise/HeroBanner'
+import SearchExercises from '../components/Exercise/SearchExercises'
+import '../styles/Exercise.css'
+import {Box} from '@mui/material'
 
+
+
+function ExerciseHome() {
+  const [bodyPartCard, setBodyPartCards] =useState('all');
+  const [exercises,setExercises] = useState([]);
+
+  if (Auth.loggedIn()) {
   return (
+    <Box className='exerciseHome'>
+      {/* <Segment > */}
+        <HeroBanner/>
+        <SearchExercises 
+          setExercises={setExercises} 
+          bodyPartCard={bodyPartCard}
+          setBodyPartCards={setBodyPartCards}
+          />
+        <Exercises 
+          setExercises={setExercises} 
+          bodyPartCard={bodyPartCard} 
+          setBodyPartCards={setBodyPartCards}
+          />
+        {/* </Segment>  */}
 
-    // <div>HI</div>
-    <Grid columns={3}>
-    <Grid.Row className="page-title">
-      <h1 style={{margin: "auto"}}>Recent Posts</h1>
-    </Grid.Row>
-    <Grid.Row>
-      {loading ? (
-        <h1>Loading posts..</h1>
-      ) : (
-        data &&
-        data.getAllPosts.map((post) => (
-          <Grid.Column key={post.id} style={{ marginBottom: 20 }}>
-            <PostCard post={post} />
-          </Grid.Column>
-        ))
-      )}
-    </Grid.Row>
-  </Grid>
-  );
+       
+    </Box>
+   
+
+
+  )
+}
+return (
+  <Login/>
+  )
 }
 
 
-export default Home
+export default ExerciseHome;
+
+
