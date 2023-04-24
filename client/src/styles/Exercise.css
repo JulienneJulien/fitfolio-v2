@@ -35,14 +35,14 @@
     margin-top: -295px;
 }
 
-.bodyPartCards {
+/* .bodyPartCards {
     transform: scale(1, 1);
     transition: 0.3s all ease-in-out;
 }
 
 .bodyPartCards:hover {
     transform: scale(1.1, 1.1);
-}
+} */
 
   /* .react-horizontal-scrolling-menu--wrapper {
     width: 100%;

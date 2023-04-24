@@ -26,11 +26,11 @@ function ExerciseHome() {
           bodyPart={bodyPart}
           setBodyPart={setBodyPart}
           />
-        <Exercises 
+        {/* <Exercises 
           setExercises={setExercises} 
           bodyPart={bodyPart} 
           setBodyPart={setBodyPart}
-          />
+          /> */}
         {/* </Segment>  */}
 
        
