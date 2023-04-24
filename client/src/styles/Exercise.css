@@ -35,14 +35,34 @@
     margin-top: -295px;
 }
 
-/* .bodyPartCards {
+.bodyPartCards {
     transform: scale(1, 1);
     transition: 0.3s all ease-in-out;
 }
 
 .bodyPartCards:hover {
     transform: scale(1.1, 1.1);
-} */
+}
+
+.wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+.wrapper {
+    max-height: 22rem;
+    border: 1px solid darkgoldenrod;
+    display: flex;
+    overflow-x: auto;
+    /* scroll-snap-type: x mandatory */
+}
+
+.wrapper #card {
+    scroll-snap-align: start;
+}
+
+
+
+
 
   /* .react-horizontal-scrolling-menu--wrapper {
     width: 100%;

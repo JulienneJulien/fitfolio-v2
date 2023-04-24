@@ -1,9 +1,9 @@
-// import React from 'react'
+import React from 'react'
 
-// function Exercises() {
-//   return (
-//     <div>Exercises</div>
-//   )
-// }
+function Exercises() {
+  return (
+    <div>Exercises</div>
+  )
+}
 
-// export default Exercises
+export default Exercises
