@@ -36,7 +36,7 @@
 }
 
 #iconImage {
-    color:#093f09
+    color:#232F3E
 }
 
 .bodyPartCards {
@@ -73,6 +73,22 @@
   transform: scale(1.3, 1.3);
   color:red;
 }
+
+.exerciseCard {
+    width: 400px;
+    height: 445px;
+    background: #fff;
+    border-top: 4px solid #232F3E;
+    border-bottom-left-radius: 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 10px;
+    transform: scale(1, 1);
+    transition: 0.3s all ease-in-out;
+  }
+
 
   @media screen and (max-width:1200px) {
     .runner {
