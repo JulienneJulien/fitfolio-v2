@@ -78,41 +78,38 @@ const Cart = () => {
   }
 
   return (
-    <div className="cart">
-      <div className="close" onClick={toggleCart}>
-        [close]
-      </div>
-      <h2>Shopping Cart</h2>
-      {state.cart.length ? (
-        <div>
-          {state.cart.map((item) => (
-            <CartItem key={item._id} item={item} />
-          ))}
+    // <div className="cart">
+    //   <div className="close" onClick={toggleCart}>
+    //     [close]
+    //   </div>
+    //   <h2>Shopping Cart</h2>
+    //   {state.cart.length ? (
+    //     <div>
+    //       {state.cart.map((item) => (
+    //         <CartItem key={item._id} item={item} />
+    //       ))}
 
-          <div className="flex-row space-between">
-            <strong>Total: ${calculateTotal()}</strong>
+    //       <div className="flex-row space-between">
+    //         <strong>Total: ${calculateTotal()}</strong>
 
-            {/* Check to see if the user is logged in. If so render a button to check out */}
-            {Auth.loggedIn() ? (
-              <button onClick={submitCheckout}>Checkout</button>
-            ) : (
-              <span>(log in to check out)</span>
-            )}
-          </div>
-        </div>
-      ) : (
-        <h3>
-          <span role="img" aria-label="shocked">
-            😱
-          </span>
-          You haven't added anything to your cart yet!
-        </h3>
-      )}
-    </div>
-  );
-};
-
-<section className="py-20 bg-gray-100">
+    //         {/* Check to see if the user is logged in. If so render a button to check out */}
+    //         {Auth.loggedIn() ? (
+    //           <button onClick={submitCheckout}>Checkout</button>
+    //         ) : (
+    //           <span>(log in to check out)</span>
+    //         )}
+    //       </div>
+    //     </div>
+    //   ) : (
+    //     <h3>
+    //       <span role="img" aria-label="shocked">
+    //         😱
+    //       </span>
+    //       You haven't added anything to your cart yet!
+    //     </h3>
+    //   )}
+    // </div>
+    <section className="py-20 bg-orange-200">
   <div className="container mx-auto px-4">
     <div className="p-8 lg:p-20 bg-white">
       <h2 className="mb-20 text-5xl font-bold font-heading">Your cart</h2>
@@ -143,7 +140,7 @@ const Cart = () => {
                   </div>
                   <div className="w-2/3 px-4">
                     <h3 className="mb-2 text-xl font-bold font-heading">BRILE water filter carafe</h3>
-                    <p className="text-gray-500">Maecenas 0.7 commodo sit</p>
+                    <p className="text-gray-500">Top of the line water filter!</p>
                   </div>
                 </div>
               </div>
@@ -152,7 +149,7 @@ const Cart = () => {
                 <span className="text-xs text-gray-500 line-through">$33.69</span>
               </div>
               <div className="w-auto md:w-1/6 lg:w-2/12 px-4">
-                <div className="inline-flex items-center px-4 font-semibold font-heading text-gray-500 border border-gray-200 focus:ring-blue-300 focus:border-blue-300 rounded-md">
+                <div className="inline-flex items-center px-4 font-semibold font-heading text-gray-500 border border-gray-200 focus:ring-red-300 focus:border-red-300 rounded-md">
                   <button className="py-2 hover:text-gray-700">
                     <svg width="12" height="2" viewbox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.35"><rect x="12" width="2" height="12" transform="rotate(90 12 0)" fill="currentColor"></rect></g></svg>
                   </button>
@@ -163,7 +160,7 @@ const Cart = () => {
                 </div>
               </div>
               <div className="w-auto md:w-1/6 lg:w-2/12 px-4 text-right">
-                <p className="text-lg text-blue-500 font-bold font-heading">$29.89</p>
+                <p className="text-lg text-red-500 font-bold font-heading">$29.89</p>
               </div>
             </div>
             <div className="flex flex-wrap items-center -mx-4">
@@ -176,7 +173,7 @@ const Cart = () => {
                   </div>
                   <div className="w-full md:w-2/3 px-4">
                     <h3 className="mb-2 text-xl font-bold font-heading">Nike basketball ball</h3>
-                    <p className="text-gray-500">Lorem ipsum dolor L</p>
+                    <p className="text-gray-500">Steph Curry limited edition</p>
                   </div>
                 </div>
               </div>
@@ -202,12 +199,12 @@ const Cart = () => {
           </div>
           <div className="flex flex-wrap items-center lg:-mb-4">
             <span className="mr-12 mb-4 font-medium">Apply discount code:</span>
-            <input className="flex-1 md:flex-none mr-6 sm:mr-0 md:mr-6 mb-4 px-8 py-4 placeholder-gray-800 font-bold font-heading border rounded-md" type="text" placeholder="SUMMER30X"/>
+            <input className="flex-1 md:flex-none mr-6 sm:mr-0 md:mr-6 mb-4 px-8 py-4 placeholder-gray-800 font-bold font-heading border rounded-md" type="text" placeholder="Fit30"/>
             <a className="flex-1 md:flex-none inline-block mb-4 px-8 py-4 text-center text-white font-bold font-heading uppercase bg-gray-800 hover:bg-gray-700 rounded-md" href="#">Apply</a>
           </div>
         </div>
         <div className="w-full xl:w-4/12 px-4">
-          <div className="p-6 md:p-12 bg-blue-300">
+          <div className="p-6 md:p-12 bg-gray-700">
             <h2 className="mb-6 text-4xl font-bold font-heading text-white">Cart totals</h2>
             <div className="flex mb-8 items-center justify-between pb-5 border-b border-blue-100">
               <span className="text-blue-50">Subtotal</span>
@@ -233,4 +230,8 @@ const Cart = () => {
     </div>
   </div>
 </section>
+  );
+};
+
+
 export default Cart;

@@ -30,12 +30,13 @@ function Login(props) {
   };
 
   return (
+    <section className="py-20 bg-orange-200 overflow-x-hidden">
     <div className="container my-1">
       <Link to="/signup">← Go to Signup</Link>
 
       <h2>Login</h2>
       <form onSubmit={handleFormSubmit}>
-        <div className="flex-row space-between my-2">
+        <div className="flex-row space-between my-2 bg-dark-orange-800">
           <label htmlFor="email">Email address:</label>
           <input
             placeholder="youremail@test.com"
@@ -45,7 +46,7 @@ function Login(props) {
             onChange={handleChange}
           />
         </div>
-        <div className="flex-row space-between my-2">
+        <div className="flex-row space-between my-2 bg-dark-orange-800">
           <label htmlFor="pwd">Password:</label>
           <input
             placeholder="******"
@@ -65,6 +66,7 @@ function Login(props) {
         </div>
       </form>
     </div>
+    </section>
   );
 }
 
