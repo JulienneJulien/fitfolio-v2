@@ -20,7 +20,7 @@ const FitShop = () => {
           </div>
         )
       }} */}
-      <section className="py-20 bg-orange-100">
+      <section className="py-20 bg-orange-200">
   <div className="container mx-auto px-4">
     <h2 className="mb-16 md:mb-24 text-4xl md:text-5xl font-bold font-heading">Discover our products!</h2>
     <div className="flex flex-wrap -mx-3 mb-24">
