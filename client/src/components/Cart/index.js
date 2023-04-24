@@ -112,159 +112,124 @@ const Cart = () => {
   );
 };
 
-<section class="py-20 bg-gray-100">
-  <div class="container mx-auto px-4">
-    <div class="px-4 py-16 md:py-28 lg:px-20 bg-white">
-      <h2 class="mb-8 text-5xl font-bold font-heading">Thanks for ordering</h2>
-      <p class="mb-16 text-gray-500">Your payment went through</p>
-      <div class="flex flex-wrap mb-8 pb-4 border-b">
-        <div class="mr-20">
-          <h3 class="text-gray-600">Order Number</h3>
-          <p class="text-blue-300 font-bold font-heading">XYZ0864395</p>
-        </div>
-        <div class="mr-auto">
-          <h3 class="text-gray-600">Date</h3>
-          <p class="text-blue-300 font-bold font-heading">June 05, 2021</p>
-        </div>
-        <a class="inline-flex mt-6 lg:mt-0 w-full lg:w-auto justify-center items-center py-4 px-6 border hover:border-gray-500 rounded-md font-bold font-heading" href="#">
-          <svg width="16" height="20" viewbox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1V0.25C0.585786 0.25 0.25 0.585786 0.25 1L1 1ZM15 19V19.75C15.4142 19.75 15.75 19.4142 15.75 19H15ZM1 19H0.25C0.25 19.4142 0.585786 19.75 1 19.75L1 19ZM10 1L10.5303 0.46967C10.3897 0.329018 10.1989 0.25 10 0.25V1ZM15 6H15.75C15.75 5.80109 15.671 5.61032 15.5303 5.46967L15 6ZM15 18.25H1V19.75H15V18.25ZM1.75 19V1H0.25V19H1.75ZM1 1.75H10V0.25H1V1.75ZM14.25 6V19H15.75V6H14.25ZM9.46967 1.53033L14.4697 6.53033L15.5303 5.46967L10.5303 0.46967L9.46967 1.53033ZM8.25 1V5H9.75V1H8.25ZM11 7.75H15V6.25H11V7.75ZM8.25 5C8.25 6.51878 9.48122 7.75 11 7.75V6.25C10.3096 6.25 9.75 5.69036 9.75 5H8.25Z" fill="black"></path>
-          </svg>
-          <span class="ml-4">View Invoice</span>
-        </a>
-      </div>
-      <div class="flex flex-wrap -mx-4 mb-8">
-        <div class="w-full lg:w-1/6 px-4 mb-8 lg:mb-0">
-          <div class="flex items-center justify-center h-72 bg-gray-100">
-            <img class="h-64 object-cover" src="yofte-assets/images/waterbottle.png" alt=""/>
+<section className="py-20 bg-gray-100">
+  <div className="container mx-auto px-4">
+    <div className="p-8 lg:p-20 bg-white">
+      <h2 className="mb-20 text-5xl font-bold font-heading">Your cart</h2>
+      <div className="flex flex-wrap items-center -mx-4">
+        <div className="w-full xl:w-8/12 mb-8 xl:mb-0 px-4">
+          <div className="hidden lg:flex w-full">
+            <div className="w-full lg:w-3/6">
+              <h4 className="mb-6 font-bold font-heading text-gray-500">Description</h4>
+            </div>
+            <div className="w-full lg:w-1/6">
+              <h4 className="mb-6 font-bold font-heading text-gray-500">Price</h4>
+            </div>
+            <div className="w-full lg:w-1/6 text-center">
+              <h4 className="mb-6 font-bold font-heading text-gray-500">Quantity</h4>
+            </div>
+            <div className="w-full lg:w-1/6 text-right">
+              <h4 className="mb-6 font-bold font-heading text-gray-500">Subtotal</h4>
+            </div>
+          </div>
+          <div className="mb-12 py-6 border-t border-b border-gray-200">
+            <div className="flex flex-wrap items-center -mx-4 mb-6 md:mb-3">
+              <div className="w-full md:w-4/6 lg:w-6/12 px-4 mb-6 md:mb-0">
+                <div className="flex -mx-4 flex-wrap items-center">
+                  <div className="w-full md:w-1/3 px-4 mb-3">
+                    <div className="flex items-center justify-center w-full md:w-24 h-32 bg-gray-100">
+                      <img className="h-full object-contain" src="yofte-assets/images/waterbottle.png" alt=""/>
+                    </div>
+                  </div>
+                  <div className="w-2/3 px-4">
+                    <h3 className="mb-2 text-xl font-bold font-heading">BRILE water filter carafe</h3>
+                    <p className="text-gray-500">Maecenas 0.7 commodo sit</p>
+                  </div>
+                </div>
+              </div>
+              <div className="hidden lg:block lg:w-2/12 px-4">
+                <p className="text-lg text-blue-500 font-bold font-heading">$29.89</p>
+                <span className="text-xs text-gray-500 line-through">$33.69</span>
+              </div>
+              <div className="w-auto md:w-1/6 lg:w-2/12 px-4">
+                <div className="inline-flex items-center px-4 font-semibold font-heading text-gray-500 border border-gray-200 focus:ring-blue-300 focus:border-blue-300 rounded-md">
+                  <button className="py-2 hover:text-gray-700">
+                    <svg width="12" height="2" viewbox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.35"><rect x="12" width="2" height="12" transform="rotate(90 12 0)" fill="currentColor"></rect></g></svg>
+                  </button>
+                  <input className="w-12 m-0 px-2 py-4 text-center md:text-right border-0 focus:ring-transparent focus:outline-none rounded-md" type="number" placeholder="1"/>
+                  <button className="py-2 hover:text-gray-700">
+                    <svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.35"><rect x="5" width="2" height="12" fill="currentColor"></rect><rect x="12" y="5" width="2" height="12" transform="rotate(90 12 5)" fill="currentColor"></rect></g></svg>
+                  </button>
+                </div>
+              </div>
+              <div className="w-auto md:w-1/6 lg:w-2/12 px-4 text-right">
+                <p className="text-lg text-blue-500 font-bold font-heading">$29.89</p>
+              </div>
+            </div>
+            <div className="flex flex-wrap items-center -mx-4">
+              <div className="w-full md:w-4/6 lg:w-6/12 px-4 mb-6 md:mb-0">
+                <div className="flex -mx-4 flex-wrap items-center">
+                  <div className="w-full md:w-1/3 px-4 mb-3">
+                    <div className="flex items-center justify-center w-full md:w-24 h-32 bg-gray-100">
+                      <img className="h-full object-contain" src="yofte-assets/images/basketball.png" alt=""/>
+                    </div>
+                  </div>
+                  <div className="w-full md:w-2/3 px-4">
+                    <h3 className="mb-2 text-xl font-bold font-heading">Nike basketball ball</h3>
+                    <p className="text-gray-500">Lorem ipsum dolor L</p>
+                  </div>
+                </div>
+              </div>
+              <div className="hidden lg:block lg:w-2/12 px-4">
+                <p className="text-lg text-blue-500 font-bold font-heading">$29.89</p>
+                <span className="text-xs text-gray-500 line-through">$33.69</span>
+              </div>
+              <div className="w-auto md:w-1/6 lg:w-2/12 px-4">
+                <div className="inline-flex items-center px-4 font-semibold font-heading text-gray-500 border border-gray-200 focus:ring-blue-300 focus:border-blue-300 rounded-md">
+                  <button className="py-2 hover:text-gray-700">
+                    <svg width="12" height="2" viewbox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.35"><rect x="12" width="2" height="12" transform="rotate(90 12 0)" fill="currentColor"></rect></g></svg>
+                  </button>
+                  <input className="w-12 m-0 px-2 py-4 text-center md:text-right border-0 focus:ring-transparent focus:outline-none rounded-md" type="number" placeholder="1"/>
+                  <button className="py-2 hover:text-gray-700">
+                    <svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.35"><rect x="5" width="2" height="12" fill="currentColor"></rect><rect x="12" y="5" width="2" height="12" transform="rotate(90 12 5)" fill="currentColor"></rect></g></svg>
+                  </button>
+                </div>
+              </div>
+              <div className="w-auto md:w-1/6 lg:w-2/12 px-4 text-right">
+                <p className="text-lg text-blue-500 font-bold font-heading">$29.89</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-wrap items-center lg:-mb-4">
+            <span className="mr-12 mb-4 font-medium">Apply discount code:</span>
+            <input className="flex-1 md:flex-none mr-6 sm:mr-0 md:mr-6 mb-4 px-8 py-4 placeholder-gray-800 font-bold font-heading border rounded-md" type="text" placeholder="SUMMER30X"/>
+            <a className="flex-1 md:flex-none inline-block mb-4 px-8 py-4 text-center text-white font-bold font-heading uppercase bg-gray-800 hover:bg-gray-700 rounded-md" href="#">Apply</a>
           </div>
         </div>
-        <div class="w-full lg:w-5/6 px-4">
-          <div class="flex mb-16">
-            <div class="mr-auto">
-              <h3 class="text-xl font-bold font-heading">BRILE water filter carafe</h3>
-              <p class="text-gray-500">Maecenas 0.7 commodo sit</p>
+        <div className="w-full xl:w-4/12 px-4">
+          <div className="p-6 md:p-12 bg-blue-300">
+            <h2 className="mb-6 text-4xl font-bold font-heading text-white">Cart totals</h2>
+            <div className="flex mb-8 items-center justify-between pb-5 border-b border-blue-100">
+              <span className="text-blue-50">Subtotal</span>
+              <span className="text-xl font-bold font-heading text-white">$89.67</span>
             </div>
-            <span class="text-2xl font-bold font-heading text-blue-300">$29.89</span>
-          </div>
-          <div class="flex flex-wrap -mx-4">
-            <div class="w-full lg:w-auto px-4 md:px-10 mb-6 lg:mb-0">
-              <h4 class="mb-6 font-bold font-heading">Delivery Address</h4>
-              <p class="text-gray-500">Morgan S Hembree</p>
-              <p class="text-gray-500">4767 Woodland Terrace</p>
-              <p class="text-gray-500">California, CA 95821</p>
+            <h4 className="mb-2 text-xl font-bold font-heading text-white">Shipping</h4>
+            <div className="flex mb-2 justify-between items-center">
+              <span className="text-blue-50">Next day</span>
+              <span className="text-xl font-bold font-heading text-white">$11.00</span>
             </div>
-            <div class="w-full lg:w-auto px-4 md:px-10 mb-6 lg:mb-0">
-              <h4 class="mb-6 font-bold font-heading">Shipping Informations</h4>
-              <p class="text-gray-500">morgan@shuffleux.com</p>
-              <p class="text-gray-500">916-971-2145</p>
+            <div className="flex mb-10 justify-between items-center">
+              <span className="text-blue-50">Shipping to United States</span>
+              <span className="text-xl font-bold font-heading text-white">-</span>
             </div>
-            <div class="w-full lg:w-auto px-4 md:px-10">
-              <h4 class="mb-6 font-bold font-heading">Payment Informations</h4>
-              <p class="text-gray-500">Mastercard</p>
-              <p class="text-gray-500">Ending with 4242</p>
-              <p class="text-gray-500">Expires 02 / 28</p>
+            <div className="flex mb-10 justify-between items-center">
+              <span className="text-xl font-bold font-heading text-white">Order total</span>
+              <span className="text-xl font-bold font-heading text-white">$100.67</span>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="flex flex-wrap -mx-4 mb-8">
-        <div class="w-full lg:w-1/6 px-4 mb-8 lg:mb-0">
-          <div class="flex items-center justify-center h-72 bg-gray-100">
-            <img class="h-64 object-cover" src="yofte-assets/images/basketball.png" alt=""/>
-          </div>
-        </div>
-        <div class="w-full lg:w-5/6 px-4">
-          <div class="flex mb-16">
-            <div class="mr-auto">
-              <h3 class="text-xl font-bold font-heading">NIKE Basketball Ball</h3>
-              <p class="text-gray-500">Lorem ipsum dolor size L</p>
-            </div>
-            <span class="text-2xl font-bold font-heading text-blue-300">$29.89</span>
-          </div>
-          <div class="flex flex-wrap -mx-4">
-            <div class="w-full lg:w-auto px-4 md:px-10 mb-6 lg:mb-0">
-              <h4 class="mb-6 font-bold font-heading">Delivery Address</h4>
-              <p class="text-gray-500">Morgan S Hembree</p>
-              <p class="text-gray-500">4767 Woodland Terrace</p>
-              <p class="text-gray-500">California, CA 95821</p>
-            </div>
-            <div class="w-full lg:w-auto px-4 md:px-10 mb-6 lg:mb-0">
-              <h4 class="mb-6 font-bold font-heading">Shipping Informations</h4>
-              <p class="text-gray-500">morgan@shuffleux.com</p>
-              <p class="text-gray-500">916-971-2145</p>
-            </div>
-            <div class="w-full lg:w-auto px-4 md:px-10">
-              <h4 class="mb-6 font-bold font-heading">Payment Informations</h4>
-              <p class="text-gray-500">Mastercard</p>
-              <p class="text-gray-500">Ending with 4242</p>
-              <p class="text-gray-500">Expires 02 / 28</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="flex flex-wrap -mx-4 mb-8">
-        <div class="w-full lg:w-1/6 px-4 mb-8 lg:mb-0">
-          <div class="flex items-center justify-center h-72 bg-gray-100">
-            <img class="h-64 object-cover" src="yofte-assets/images/backpack.png" alt=""/>
-          </div>
-        </div>
-        <div class="w-full lg:w-5/6 px-4">
-          <div class="flex mb-16">
-            <div class="mr-auto">
-              <h3 class="text-xl font-bold font-heading">Backpack Travel</h3>
-              <p class="text-gray-500">Maecenas commodo libero ut molestie dictum. Morbi placerat eros id porttitor sagittis.</p>
-            </div>
-            <span class="text-2xl font-bold font-heading text-blue-300">$29.89</span>
-          </div>
-          <div class="flex flex-wrap -mx-4">
-            <div class="w-full lg:w-auto px-4 md:px-10 mb-6 lg:mb-0">
-              <h4 class="mb-6 font-bold font-heading">Delivery Address</h4>
-              <p class="text-gray-500">Morgan S Hembree</p>
-              <p class="text-gray-500">4767 Woodland Terrace</p>
-              <p class="text-gray-500">California, CA 95821</p>
-            </div>
-            <div class="w-full lg:w-auto px-4 md:px-10 mb-6 lg:mb-0">
-              <h4 class="mb-6 font-bold font-heading">Shipping Informations</h4>
-              <p class="text-gray-500">morgan@shuffleux.com</p>
-              <p class="text-gray-500">916-971-2145</p>
-            </div>
-            <div class="w-full lg:w-auto px-4 md:px-10">
-              <h4 class="mb-6 font-bold font-heading">Payment Informations</h4>
-              <p class="text-gray-500">Mastercard</p>
-              <p class="text-gray-500">Ending with 4242</p>
-              <p class="text-gray-500">Expires 02 / 28</p>
-            </div>
+            <a className="block w-full py-4 bg-orange-300 hover:bg-orange-400 text-center text-white font-bold font-heading uppercase rounded-md transition duration-200" href="#">Go to Checkout</a>
           </div>
         </div>
       </div>
-      <div class="mb-4">
-        <div class="py-3 px-10 bg-gray-100 rounded-full">
-          <div class="flex justify-between">
-            <span class="font-bold font-heading">Subtotal</span>
-            <span class="font-bold font-heading">$89.67</span>
-          </div>
-        </div>
-        <div class="py-3 px-10 rounded-full">
-          <div class="flex justify-between">
-            <span class="font-bold font-heading">Shipping</span>
-            <span class="font-bold font-heading">$11.00</span>
-          </div>
-        </div>
-        <div class="py-3 px-10 bg-gray-100 rounded-full">
-          <div class="flex justify-between">
-            <span class="font-bold font-heading">Tax</span>
-            <span class="font-bold font-heading">$0.00</span>
-          </div>
-        </div>
-        <div class="py-3 px-10 rounded-full">
-          <div class="flex justify-between">
-            <span class="text-base md:text-xl font-bold font-heading">Order Total</span>
-            <span class="font-bold font-heading">$100.67</span>
-          </div>
-        </div>
-      </div>
-      <div class="text-right"><a class="inline-block w-full md:w-auto text-center px-8 py-4 bg-orange-300 hover:bg-orange-400 text-white font-bold font-heading uppercase rounded-md transition duration-200" href="#">Go back Shopping</a></div>
     </div>
   </div>
 </section>
