@@ -37,14 +37,15 @@ function Contact() {
     return (
        
         <div class="flex-column justify-content-center" id='contactDiv'>
-          <h2 className='titleNavsPage'>Contact Us</h2> 
+          <h2 className='titleNavsPage'>Contact</h2> 
+          <p><b><i>Please contact us!</i></b></p>
+
 
           <form class=" flex-column justify-content-center" id="contact-form"   >
               <div>
                   <label htmlFor="name">Name:</label>
                   <input class="form-control" type="text" name="name"  defaultValue={name} onBlur={handleChange}/>
               </div>
-              
               <div >
                   <label htmlFor="email">Email:</label>
                   <input class="form-control" type="email"  name="email" defaultValue={email} onBlur={handleChange} />
