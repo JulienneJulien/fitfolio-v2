@@ -22,7 +22,9 @@ function BodyPartCard({ item, bodyPartCard, setBodyPartCards }) {
             gap: '47px'
           }}
       >
-        <img src={Icon} alt="dumbbell" style={{width: '40px', height:'40px'}}/>
+        <img src={Icon} alt="dumbbell" style={{width: '80px', height:'80px'}}/>
+          <Typography>{item}</Typography>
+
     </Stack>
   )
 }

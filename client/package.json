@@ -18,13 +18,11 @@
     "prettier": "^2.8.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-horizontal-scrolling-menu": "^4.0.4",
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.1",
     "semantic-ui-css": "^2.5.0",
     "semantic-ui-react": "^2.1.4",
-    "swiper": "^9.2.4",
     "typed.js": "^2.0.15"
   },
   "scripts": {
