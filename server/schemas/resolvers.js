@@ -98,7 +98,7 @@ const resolvers = {
   },
   Mutation: {
     async createPost(_, { body} , user, args, username, context){
-    
+    console.log("Username goes here", user.id);
       const newPost = new Post({
         body,
         user:user.id,

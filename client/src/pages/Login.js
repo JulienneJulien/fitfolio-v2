@@ -33,7 +33,6 @@ function Login(props) {
     <section className="py-20 bg-orange-200 overflow-x-hidden">
     <div className="container my-1">
       <Link to="/signup">← Go to Signup</Link>
-
       <h2>Login</h2>
       <form onSubmit={handleFormSubmit}>
         <div className="flex-row space-between my-2 bg-dark-orange-800">

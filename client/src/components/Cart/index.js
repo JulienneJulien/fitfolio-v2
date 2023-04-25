@@ -112,21 +112,21 @@ const Cart = () => {
     <section className="py-20 bg-orange-200">
   <div className="container mx-auto px-4">
     <div className="p-8 lg:p-20 bg-white">
-      <h2 className="mb-20 text-5xl font-bold font-heading">Your cart</h2>
+      <h2 className="mb-20 text-5xl font-bold text-gray-700 font-heading">Your cart</h2>
       <div className="flex flex-wrap items-center -mx-4">
         <div className="w-full xl:w-8/12 mb-8 xl:mb-0 px-4">
           <div className="hidden lg:flex w-full">
             <div className="w-full lg:w-3/6">
-              <h4 className="mb-6 font-bold font-heading text-gray-500">Description</h4>
+              <h4 className="mb-6 font-bold font-heading text-gray-700">Description</h4>
             </div>
             <div className="w-full lg:w-1/6">
-              <h4 className="mb-6 font-bold font-heading text-gray-500">Price</h4>
+              <h4 className="mb-6 font-bold font-heading text-gray-700">Price</h4>
             </div>
             <div className="w-full lg:w-1/6 text-center">
-              <h4 className="mb-6 font-bold font-heading text-gray-500">Quantity</h4>
+              <h4 className="mb-6 font-bold font-heading text-gray-700">Quantity</h4>
             </div>
             <div className="w-full lg:w-1/6 text-right">
-              <h4 className="mb-6 font-bold font-heading text-gray-500">Subtotal</h4>
+              <h4 className="mb-6 font-bold font-heading text-gray-700">Subtotal</h4>
             </div>
           </div>
           <div className="mb-12 py-6 border-t border-b border-gray-200">
@@ -139,13 +139,13 @@ const Cart = () => {
                     </div>
                   </div>
                   <div className="w-2/3 px-4">
-                    <h3 className="mb-2 text-xl font-bold font-heading">BRILE water filter carafe</h3>
-                    <p className="text-gray-500">Top of the line water filter!</p>
+                    <h3 className="mb-2 text-xl font-bold font-heading">24oz Bottle</h3>
+                    <p className="text-gray-500">Simple Modern</p>
                   </div>
                 </div>
               </div>
               <div className="hidden lg:block lg:w-2/12 px-4">
-                <p className="text-lg text-blue-500 font-bold font-heading">$29.89</p>
+                <p className="text-lg text-red-500 font-bold font-heading">$29.89</p>
                 <span className="text-xs text-gray-500 line-through">$33.69</span>
               </div>
               <div className="w-auto md:w-1/6 lg:w-2/12 px-4">
@@ -160,7 +160,6 @@ const Cart = () => {
                 </div>
               </div>
               <div className="w-auto md:w-1/6 lg:w-2/12 px-4 text-right">
-                <p className="text-lg text-red-500 font-bold font-heading">$29.89</p>
               </div>
             </div>
             <div className="flex flex-wrap items-center -mx-4">
@@ -172,13 +171,13 @@ const Cart = () => {
                     </div>
                   </div>
                   <div className="w-full md:w-2/3 px-4">
-                    <h3 className="mb-2 text-xl font-bold font-heading">Nike basketball ball</h3>
-                    <p className="text-gray-500">Steph Curry limited edition</p>
+                    <h3 className="mb-2 text-xl font-bold font-heading">Steph Curry limited edition basketball</h3>
+                    <p className="text-gray-500">Spalding</p>
                   </div>
                 </div>
               </div>
               <div className="hidden lg:block lg:w-2/12 px-4">
-                <p className="text-lg text-blue-500 font-bold font-heading">$29.89</p>
+                <p className="text-lg text-red-500 font-bold font-heading">$29.89</p>
                 <span className="text-xs text-gray-500 line-through">$33.69</span>
               </div>
               <div className="w-auto md:w-1/6 lg:w-2/12 px-4">
@@ -193,7 +192,6 @@ const Cart = () => {
                 </div>
               </div>
               <div className="w-auto md:w-1/6 lg:w-2/12 px-4 text-right">
-                <p className="text-lg text-blue-500 font-bold font-heading">$29.89</p>
               </div>
             </div>
           </div>
@@ -207,23 +205,23 @@ const Cart = () => {
           <div className="p-6 md:p-12 bg-gray-700">
             <h2 className="mb-6 text-4xl font-bold font-heading text-white">Cart totals</h2>
             <div className="flex mb-8 items-center justify-between pb-5 border-b border-blue-100">
-              <span className="text-blue-50">Subtotal</span>
+              <span className="text-gray-500">Subtotal</span>
               <span className="text-xl font-bold font-heading text-white">$89.67</span>
             </div>
             <h4 className="mb-2 text-xl font-bold font-heading text-white">Shipping</h4>
             <div className="flex mb-2 justify-between items-center">
-              <span className="text-blue-50">Next day</span>
+              <span className="text-gray-500">Next day</span>
               <span className="text-xl font-bold font-heading text-white">$11.00</span>
             </div>
             <div className="flex mb-10 justify-between items-center">
-              <span className="text-blue-50">Shipping to United States</span>
+              <span className="text-gray-500">Shipping to United States</span>
               <span className="text-xl font-bold font-heading text-white">-</span>
             </div>
             <div className="flex mb-10 justify-between items-center">
               <span className="text-xl font-bold font-heading text-white">Order total</span>
               <span className="text-xl font-bold font-heading text-white">$100.67</span>
             </div>
-            <a className="block w-full py-4 bg-orange-300 hover:bg-orange-400 text-center text-white font-bold font-heading uppercase rounded-md transition duration-200" href="#">Go to Checkout</a>
+            <a className="block w-full py-4 bg-orange-300 hover:bg-orange-400 hover:text-gray-700 text-center text-white font-bold font-heading uppercase rounded-md transition duration-200" href="#">Go to Checkout</a>
           </div>
         </div>
       </div>
