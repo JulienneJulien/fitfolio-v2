@@ -22,16 +22,16 @@ const FitShop = () => {
       }} */}
       <section className="py-20 bg-orange-200">
   <div className="container mx-auto px-4">
-    <h2 className="mb-16 md:mb-24 text-4xl md:text-5xl font-bold font-heading">Discover our products!</h2>
+    <h2 className="mb-16 md:mb-24 text-4xl md:text-5xl text-gray-700 font-bold font-heading">Discover our products!</h2>
     <div className="flex flex-wrap -mx-3 mb-24">
       <div className="w-full md:w-1/2 lg:w-1/4 px-3 mb-6 lg:mb-0">
         <div className="p-6 bg-orange-50">
           <span className="px-2 py-1 text-xs font-bold font-heading border-2 border-red-500 rounded-full text-red-500 bg-white">-15%</span>
           <a className="block px-6 mt-6 mb-2" href="#">
 
-            <img className="mb-5 mx-auto h-56 w-full object-contain" src="../assets/images/logoHat.png" alt=""/>
-            <h3 className="mb-2 text-xl font-bold font-heading">FitFolio Logo Hat</h3>
-            <p className="text-lg font-bold font-heading text-blue-500">
+            <img className="mb-5 mx-auto h-56 w-full object-contain" src="/logoHat.png" alt=""/>
+            <h3 className="mb-2 text-xl text-gray-700 font-bold font-heading">FitFolio Logo Hat</h3>
+            <p className="text-lg font-bold font-heading text-red-500">
               <span>$29.89</span>
               <span className="text-xs text-gray-500 font-semibold font-heading line-through">$33.69</span>
             </p>
@@ -45,11 +45,11 @@ const FitShop = () => {
         <div className="p-6 bg-gray-50">
           <span className="px-2 py-1 text-xs font-bold font-heading border-2 border-red-500 rounded-full text-red-500 bg-white">-15%</span>
           <a className="block px-6 mt-6 mb-2" href="#">
-            <img className="mb-5 mx-auto h-56 w-full object-contain" src="yofte-assets/images/cycle.png" alt=""/>
-            <h3 className="mb-2 text-xl font-bold font-heading">Bicycle S20</h3>
+            <img className="mb-5 mx-auto h-56 w-full object-contain" src="/CanyonAeroadBike.png" alt=""/>
+            <h3 className="mb-2 text-xl text-gray-700 font-bold font-heading">2020 Canyon AeroRoad SL Bicycle</h3>
             <p className="text-lg font-bold font-heading text-red-500">
-              <span>$14.30</span>
-              <span className="text-xs text-gray-500 font-semibold font-heading line-through">$15.90</span>
+              <span>$6,034.91</span>
+              <span className="text-xs text-gray-500 font-semibold font-heading line-through">$7,099.90</span>
             </p>
           </a>
           <a className="ml-auto mr-2 flex items-center justify-center w-12 h-12 border rounded-lg hover:border-gray-500" href="#">
@@ -61,8 +61,8 @@ const FitShop = () => {
         <div className="p-6 bg-gray-50">
           <span className="px-2 py-1"></span>
           <a className="block px-6 mt-6 mb-2" href="#">
-            <img className="mb-5 mx-auto h-56 w-full object-contain" src="yofte-assets/images/basketball.png" alt=""/>
-            <h3 className="mb-2 text-xl font-bold font-heading">Nike basketball ball</h3>
+            <img className="mb-5 mx-auto h-56 w-full object-contain" src="/StephCurryBall.png" alt=""/>
+            <h3 className="mb-2 text-xl text-gray-700 font-bold font-heading">Steph Curry special edition basketball</h3>
             <p className="text-lg font-bold font-heading text-red-500">
               <span>$34.89</span>
               <span className="text-xs text-gray-500 font-semibold font-heading line-through">$33.69</span>
@@ -75,12 +75,12 @@ const FitShop = () => {
       </div>
       <div className="w-full md:w-1/2 lg:w-1/4 px-3">
         <div className="p-6 bg-gray-50">
-          <span className="px-2 py-1 text-xs font-bold font-heading border-2 border-blue-300 rounded-full text-blue-300 bg-white">NEW</span>
+          <span className="px-2 py-1 text-xs font-bold font-heading border-2 border-blue-500 rounded-full text-blue-500 bg-white">NEW</span>
           <a className="block px-6 mt-6 mb-2" href="#">
-            <img className="mb-5 mx-auto h-56 w-full object-contain" src="yofte-assets/images/skateboard.png" alt=""/>
-            <h3 className="mb-2 text-xl font-bold font-heading">Kiteboard WH-004</h3>
+            <img className="mb-5 mx-auto h-56 w-full object-contain" src="/SMbottle.png" alt=""/>
+            <h3 className="mb-2 text-xl text-gray-700 font-bold font-heading">Simple Modern 24oz bottle</h3>
             <p className="text-lg font-bold font-heading text-red-500">
-              <span>$199.90</span>
+              <span>$29.99</span>
               <span className="text-xs text-gray-500 font-semibold font-heading line-through">$33.69</span>
             </p>
           </a>
@@ -91,7 +91,7 @@ const FitShop = () => {
       </div>
     </div>
     <div className="text-center">
-      <a className="inline-block bg-orange-300 hover:bg-orange-400 text-white font-bold font-heading py-6 px-8 rounded-md uppercase" href="#">Show More</a>
+      <a className="inline-block bg-orange-300 hover:bg-orange-400 hover:text-gray-700 text-white font-bold font-heading py-6 px-8 rounded-md uppercase" href="#">Show More</a>
     </div>
   </div>
 </section>
