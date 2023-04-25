@@ -11,7 +11,7 @@ import spinner from '../assets/spinner.gif';
 // import PostForm from '../components/PostForm';
 
 function Home() {
-  const {data,loading,error,posts} = useQuery(GET_ALL_POSTS);
+  const {loading, data, error} = useQuery(GET_ALL_POSTS);
   if (loading) {
       return  <img src={spinner} alt="loading" /> 
   }

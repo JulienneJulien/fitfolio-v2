@@ -27,7 +27,9 @@ const userSchema = new Schema({
     minlength: 5
   },
   username:{
-    typeKey: String,
+    type: String,
+    required: true,
+    unique: true
   },
   createdAt:{
     typeKey: String,
