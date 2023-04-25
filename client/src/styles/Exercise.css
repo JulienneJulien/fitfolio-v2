@@ -35,6 +35,10 @@
     margin-top: -295px;
 }
 
+#iconImage {
+    color:#232F3E
+}
+
 .bodyPartCards {
     transform: scale(1, 1);
     transition: 0.3s all ease-in-out;
@@ -43,3 +47,102 @@
 .bodyPartCards:hover {
     transform: scale(1.1, 1.1);
 }
+
+.wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+.wrapper {
+    height: 40rem;
+    /* border: 1px solid darkgoldenrod; */
+    display: flex;
+    overflow-x: auto;
+    /* scroll-snap-type: x mandatory */
+}
+
+.right-arrow,
+.left-arrow {
+  cursor: pointer;
+  color: darkgoldenrod;
+  transform: scale(1, 1);
+  transition: 0.3s all ease-in-out;
+}
+.right-arrow {
+   margin-top: 0; 
+}
+
+.right-arrow:hover,
+.left-arrow:hover {
+  transform: scale(1.3, 1.3);
+  color:red;
+}
+
+.exerciseCard {
+    width: 400px;
+    height: 445px;
+    background: #fff;
+    border-top: 4px solid #232F3E;
+    border-bottom-left-radius: 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 10px;
+    transform: scale(1, 1);
+    transition: 0.3s all ease-in-out;
+}
+
+.exerciseCard:hover {
+    text-decoration: none;
+    transform: scale(1.1, 1.1);
+}
+
+  .detailimg {
+    width: 900px;
+    height: 950px;
+}
+  
+   .workoutDescription {
+    color:  darkgoldenrod;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+    .workoutName {
+    text-shadow: 0 0 10px #3f2e09;
+    color: #d9dcd6;
+}
+
+  .iconsExercise {
+    width: 50px;
+    height: 50px;
+}
+
+    /* .wrappersimiliarExercises {
+        height: 80rem;
+} */
+
+  @media screen and (max-width:1200px) {
+    .runner {
+        display: none;
+    }
+
+    .detailimg {
+        width: 300px;
+        height: 300px;
+    }
+
+    .workoutDescription {
+        font-size: smaller;
+    }
+
+    .workoutName {
+        font-size: small;
+    }
+
+
+}
+    
+
+/* .react-horizontal-scrolling-menu--scroll-container {
+    width: 500px;
+  } */

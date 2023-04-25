@@ -1,0 +1,37 @@
+#contactDiv {
+    background-color:white;
+    width: 100%;
+    text-align: center; 
+}
+
+#contact-form {
+    background-color:#232F3E;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 3px 15px darkgoldenrod;  
+    transition: 2s;
+    height: auto;
+    width: 50%;
+    margin:0;
+    margin-bottom: 7rem;
+    display: inline-block;
+}
+
+p, h2 {
+    padding-top: 8px;
+    color: b7996a;  
+}
+
+.error-text {
+    color: darkgoldenrod;  
+    padding-top: 2rem;
+}
+
+label {
+    color: darkgoldenrod; 
+    padding: 5px 10px 10px;
+}
+
+#button {
+    background: darkgoldenrod 
+}
