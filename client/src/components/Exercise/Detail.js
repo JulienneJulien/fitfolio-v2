@@ -1,7 +1,7 @@
 import React from 'react'
 import { Typography, Stack, Button } from '@mui/material'
-import BodyPartIcon from '../../assets/musclesIcon.png'
-import TargetIcon from '../../assets/fit-icon.png'
+import BodyPartIcon from '../../assets/bodyPart.png'
+import TargetIcon from '../../assets/musclesIcon.png'
 import EquipmentIcon from '../../assets/equipment.png'
 
 function Detail({exerciseDetail}) {

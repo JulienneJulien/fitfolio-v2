@@ -4,6 +4,7 @@ import BodyPartCard from './BodyPartCard'
 import {MdChevronLeft, MdChevronRight} from 'react-icons/md'
 import ExerciseCard from './ExerciseCard'
 
+
 function HorizontalScrollbar({data, bodyPartCard, setBodyPartCards,isBodyParts }) {
 
   const slideLeft = () => {
