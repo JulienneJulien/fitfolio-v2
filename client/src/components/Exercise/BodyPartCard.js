@@ -1,6 +1,6 @@
 import React from 'react'
 import { Stack, Typography } from '@mui/material'
-import Icon from '../../assets/fit-icon.png'
+import Icon from '../../assets/cardWorkout.png'
 import '../../styles/Exercise.css'
 
 function BodyPartCard({ item, bodyPartCard, setBodyPartCards }) {

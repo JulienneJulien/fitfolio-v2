@@ -50,7 +50,7 @@ function Exercises({exercises, setExercises, bodyPartCard}) {
             ))}
 
       </Stack>
-      <Stack mt="100px" alignItems="center">
+      <Stack mt={25} mb={5} alignItems="center">
         {exercises.length > 12 && (<Pagination  
         variant="outlined" 
         shape="rounded"

@@ -22,6 +22,11 @@
     text-shadow: 0 0 10px #3f2e09;
 }
 
+.spanHome2 {
+    color: #232F3E;
+    text-shadow: 0 0 10px #3f2e09;
+}
+
 .curved svg {
     display: block;
 }
@@ -149,6 +154,10 @@
         font-size: small;
     }
 
+    .left-arrow,
+    .right-arrow {
+      position: static !important;
+    }
 
 }
     
