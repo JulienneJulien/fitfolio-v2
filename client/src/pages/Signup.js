@@ -5,7 +5,7 @@ import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
 
 function Signup(props) {
-  const [formState, setFormState] = useState({ firstName: '', lastName: '', email: '', password: '' });
+  const [formState, setFormState] = useState({ firstName: '', lastName: '', username: '', email: '', password: '' });
   const [addUser] = useMutation(ADD_USER);
 
   const handleFormSubmit = async (event) => {
@@ -15,6 +15,7 @@ function Signup(props) {
       variables: {
         email: formState.email,
         password: formState.password,
+        username: formState.username,
         firstName: formState.firstName,
         lastName: formState.lastName,
       },
@@ -48,6 +49,7 @@ function Signup(props) {
           <form onSubmit= {handleFormSubmit} action="">
             <input className="w-full mb-6 px-12 py-6 border border-gray-200 focus:ring-red-300 focus:border-red-300 rounded-md" placeholder="First Name" name="firstName" type="firstName" id="firstName" onChange={handleChange}/>
             <input className="w-full mb-6 px-12 py-6 border border-gray-200 focus:ring-red-300 focus:border-red-300 rounded-md" placeholder="Last Name" name="lastName" type="lastName" id="lastName" onChange={handleChange}/>
+            <input className="w-full mb-6 px-12 py-6 border border-gray-200 focus:ring-red-300 focus:border-red-300 rounded-md" placeholder="User Name" name="username" type="username" id="username" onChange={handleChange}/>
             <input className="w-full mb-6 px-12 py-6 border border-gray-200 focus:ring-red-300 focus:border-red-300 rounded-md" placeholder="steven@example.dev"name="email"type="email" id="email" onChange={handleChange}/>
             <input className="w-full mb-6 px-12 py-6 border border-gray-200 focus:ring-red-300 focus:border-red-300 rounded-md" type="password" placeholder="Password" name="password" id="pwd" onChange={handleChange}/>
             <label className="flex" for="">
