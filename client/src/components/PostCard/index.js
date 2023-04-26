@@ -1,8 +1,17 @@
 import React from 'react'
-import { Icon, Label, Card, Image} from 'semantic-ui-react';
+import { Icon, Label, Card, Image, Button} from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
 
 function index({post: {id, body, createdAt, username,likeCount, likes, commentCount}}) {
+
+  function likePost(){
+    console.log('like post')
+  }
+
+  function commentOnPost(){
+    console.log('Commented on post')
+  }
+
 
   return (
     <Card fluid>
@@ -17,7 +26,22 @@ function index({post: {id, body, createdAt, username,likeCount, likes, commentCo
       <Card.Description>{body}</Card.Description>
     </Card.Content>
     <Card.Content extra>
-      <p>TO ADD buttons later</p>
+      <Button
+        onClick={likePost}
+       icon='heart' basic
+       label={{ as: 'a', basic: true }}
+       labelPosition='right'>
+        <Label onClick={commentOnPost}> 
+          {likeCount}
+        </Label>
+      </Button>
+        <Button basic>
+          <Icon name='comments' />
+        <Label basic onClick={commentOnPost}> 
+          {commentCount}
+        </Label>
+        </Button>
+      
     </Card.Content>
   </Card>
   )
