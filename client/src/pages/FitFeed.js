@@ -5,6 +5,7 @@ import {GET_ALL_POSTS} from '../utils/queries';
 import {Grid, Transition} from 'semantic-ui-react';
 import PostCard from '../components/PostCard/index';
 import spinner from '../assets/spinner.gif';
+import "../styles/FitFeed.css"
 
 
 
@@ -36,9 +37,9 @@ function Home() {
 
     // <div>HI</div>
     <Grid columns={3}>
-      <div style={{ border: "1px solid #ccc", padding: 10, }}>
+      <div class="flex-column justify-content-center" id='feedDiv'>
             <h2>Create a new post</h2>
-            <form onSubmit={handleSubmit}>
+            <form class=" flex-column justify-content-center" id="feed-form" onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="title">Title:</label>
                 <input
@@ -56,11 +57,11 @@ function Home() {
                   onChange={(event) => setBody(event.target.value)}
                 ></textarea>
               </div>
-              <button type="submit">Submit</button>
+              <button id='button' type="submit">Submit</button>
             </form>
           </div>
     <Grid.Row className="page-title">
-      <h1 style={{margin: "auto"}}>Recent Posts</h1>
+      <h1 class="flex-column justify-content-center" id='feedDiv'>Recent Posts</h1>
     </Grid.Row>
     <Grid.Row>
       {loading ? (
