@@ -46,14 +46,16 @@ function ProductItem(item) {
           <Link className="block px-6 mt-6 mb-2" to={`/products/${_id}`}>
             <img className="mb-5 mx-auto h-56 w-full object-contain" alt={name} src={`/images/${image}`}/>
             <h3 className="mb-2 text-xl text-gray-700 font-bold font-heading">{name}</h3>
+            </Link>
             <p className="text-lg font-bold font-heading text-red-500">
+            <div>{quantity} {pluralize("item", quantity)} in stock</div>
               <span>${price}</span>
               <span className="text-xs text-gray-500 font-semibold font-heading line-through">$15.90</span>
             </p>
-          </Link>
-          <a className="ml-auto mr-2 flex items-center justify-center w-12 h-12 border rounded-lg hover:border-gray-500" href="#">
-            <svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" width="2" height="12" fill="#161616"></rect><rect x="12" y="5" width="2" height="12" transform="rotate(90 12 5)" fill="#161616"></rect></svg>
-          </a>
+         
+          {/* <a className="ml-auto mr-2 flex items-center justify-center w-12 h-12 border rounded-lg hover:border-gray-500" href="#"> */}
+            {/* <svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" width="2" height="12" fill="#161616"></rect><rect x="12" y="5" width="2" height="12" transform="rotate(90 12 5)" fill="#161616"></rect></svg>
+          </a> */}
           <button onClick={addToCart}>Add to cart</button>
         </div>
       </div>   

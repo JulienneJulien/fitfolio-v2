@@ -1,6 +1,6 @@
 
 import { useState, React } from 'react'
-import { useQuery } from '@apollo/client'
+import { useQuery, useMutation } from '@apollo/client'
 import {GET_ALL_POSTS} from '../utils/queries';
 import {Grid, Transition} from 'semantic-ui-react';
 import PostCard from '../components/PostCard/index';
@@ -13,6 +13,7 @@ import spinner from '../assets/spinner.gif';
 function Home() {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
+  // const [] = useMutation(CREATE_POST);
   const {loading, data, error} = useQuery(GET_ALL_POSTS);
   if (loading) {
       return  <img src={spinner} alt="loading" /> 
@@ -27,7 +28,7 @@ function Home() {
     event.preventDefault();
     // Add logic to submit the post
     // using a GraphQL mutation
-    console.log("Post submitted");
+    console.log(event);
   }
 
   
