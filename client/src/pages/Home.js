@@ -16,7 +16,7 @@ function ExerciseHome() {
   const [bodyPartCard, setBodyPartCards] =useState('all');
   const [exercises,setExercises] = useState([]);
 
-console.log(bodyPartCard)
+// console.log(bodyPartCard)
 
   if (Auth.loggedIn()) {
   return (
