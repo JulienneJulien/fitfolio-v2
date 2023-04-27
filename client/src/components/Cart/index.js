@@ -15,7 +15,12 @@ const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
-
+  //  const Products=[
+  //   {id: 1, name: "hat", price: "34.99", imgUrl: "/logoHat.png" }, 
+  //   {id: 2, name: "Bike", price: "34.99", imgUrl: "/logoHat.png" }, 
+  //   {id: 3, name: "Bike", price: "34.99", imgUrl: "/logoHat.png" }, 
+  //   {id: 4, name: "Bike", price: "34.99", imgUrl: "/logoHat.png" }, 
+  // ]
   // We check to see if there is a data object that exists, if so this means that a checkout session was returned from the backend
   // Then we should redirect to the checkout with a reference to our session id
   useEffect(() => {
@@ -130,6 +135,14 @@ const Cart = () => {
             </div>
           </div>
           <div className="mb-12 py-6 border-t border-b border-gray-200">
+          {/* { Products.map((product) =>{
+        return (
+          <div>
+            <h2>hello</h2>
+            <CartItem name = {product.name} price = {product.price} />
+          </div>
+        )
+      })}   */}
             <div className="flex flex-wrap items-center -mx-4 mb-6 md:mb-3">
               <div className="w-full md:w-4/6 lg:w-6/12 px-4 mb-6 md:mb-0">
                 <div className="flex -mx-4 flex-wrap items-center">
@@ -221,7 +234,7 @@ const Cart = () => {
               <span className="text-xl font-bold font-heading text-white">Order total</span>
               <span className="text-xl font-bold font-heading text-white">$100.67</span>
             </div>
-            <a className="block w-full py-4 bg-orange-300 hover:bg-orange-400 hover:text-gray-700 text-center text-white font-bold font-heading uppercase rounded-md transition duration-200" href="#">Go to Checkout</a>
+            <a className="block w-full py-4 bg-orange-300 hover:bg-orange-400 hover:text-gray-700 text-center text-white font-bold font-heading uppercase rounded-md transition duration-200" href="Success">Go to Checkout</a>
           </div>
         </div>
       </div>
