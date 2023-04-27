@@ -15,7 +15,7 @@ function OrderHistory() {
   return (
     <>
       <div className="container my-1">
-        <Link to="/">← Back to Products</Link>
+        <Link to="/fitshop">← Back to Products</Link>
 
         {user ? (
           <>
@@ -46,7 +46,7 @@ function OrderHistory() {
 
       <section className="py-20 bg-orange-200">
   <div className="container mx-auto px-4">
-    <h2 className="mb-8 text-5xl font-bold font-heading text-gray-700">Order History for {user.firstName} {user.lastName}</h2>
+    <h2 className="mb-8 text-5xl font-bold font-heading text-gray-700"></h2>
     <p className="mb-14 text-lg text-gray-500">Recent Orders</p>
     <div className="mb-12 py-8 px-8 md:px-20 bg-white">
       <div className="flex flex-wrap mb-8 pb-4 border-b">
