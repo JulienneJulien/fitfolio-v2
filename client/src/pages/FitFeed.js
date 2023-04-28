@@ -6,6 +6,8 @@ import {Grid, Transition} from 'semantic-ui-react';
 import PostCard from '../components/PostCard/index';
 import spinner from '../assets/spinner.gif';
 import "../styles/FitFeed.css"
+import { CREATE_POST } from '../utils/mutations';
+
 
 
 
@@ -14,7 +16,7 @@ import "../styles/FitFeed.css"
 function Home() {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
-  // const [] = useMutation(CREATE_POST);
+  const [createPost] = useMutation(CREATE_POST);
   const {loading, data, error} = useQuery(GET_ALL_POSTS);
   if (loading) {
       return  <img src={spinner} alt="loading" /> 
@@ -25,18 +27,20 @@ function Home() {
   if (error) {
       console.log(error);
   }
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    fetch('/api/posts',{
-      method: 'POST',
-      body: JSON.stringify({
-        title,
-        body
-      })
-    })
+    try {
+      console.log('TEST', body)
+      const mutationResponse = await createPost({
+        variables: { body: body },
+      });
+    } catch (e) {
+      console.log(e);
+    }
     // Add logic to submit the post
     // using a GraphQL mutation
     console.log(event);
+    window.location.reload();
   }
 
   
@@ -44,9 +48,9 @@ function Home() {
 
     // <div>HI</div>
     <Grid columns={3}>
-      <div class="flex-column justify-content-center" id='feedDiv'>
+      <div className="flex-column justify-content-center" id='feedDiv'>
             <h2>Create a new post</h2>
-            <form class=" flex-column justify-content-center" id="feed-form">
+            <form className=" flex-column justify-content-center" id="feed-form">
               <div>
                 <label htmlFor="title">Title:</label>
                 <input
@@ -59,16 +63,16 @@ function Home() {
               <div>
                 <label htmlFor="body">Body:</label>
                 <textarea
-                  id="body" class="withd-500px"
+                  id="body" className="withd-500px"
                   value={body}
                   onChange={(event) => setBody(event.target.value)}
                 ></textarea>
               </div>
-              <button id='button' data-testid='button' class="btn btn-outline-dark mt-4" type="submit" onSubmit={handleSubmit}>Submit</button>
+              <button id='button' data-testid='button' className="btn btn-outline-dark mt-4" type="submit" onClick={handleSubmit}>Submit</button>
             </form>
           </div>
     <Grid.Row className="page-title">
-      <h1 class="flex-column justify-content-center" id='feedDiv'>Recent Posts</h1>
+      <h1 className="flex-column justify-content-center" id='feedDiv'>Recent Posts</h1>
     </Grid.Row>
     <Grid.Row>
       {loading ? (
