@@ -42,7 +42,9 @@ function CategoryMenu() {
   };
 
   return (
+    
     <section className="py-20 overflow-x-hidden">
+      <img className="mx-auto h-600" src="Header-background.gif" alt=""/>
   <div className="container mx-auto px-4">
     <div className="flex flex-wrap justify-center -mx-3">
       <div className="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
@@ -128,6 +130,7 @@ function CategoryMenu() {
               <p>Secure transaction</p>
             </div>
           </div>
+          
         </div>
       </div>
     </div>

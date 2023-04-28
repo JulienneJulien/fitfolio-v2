@@ -68,14 +68,14 @@ function OrderHistory() {
       <div className="flex flex-wrap -mx-4 mb-8">
         <div className="w-full lg:w-1/6 px-4 mb-8 lg:mb-0">
           <div className="flex items-center justify-center h-72 bg-gray-100">
-            <img className="h-64 object-cover" src="yofte-assets/images/waterbottle.png" alt=""/>
+            <img className="h-64 object-cover" src="../images/SMbottle.png" alt=""/>
           </div>
         </div>
         <div className="w-full lg:w-5/6 px-4">
           <div className="flex mb-16">
             <div className="mr-auto">
-              <h3 className="text-xl font-bold font-heading text-gray-700">BRILE water filter carafe</h3>
-              <p className="text-gray-500">Maecenas 0.7 commodo sit</p>
+              <h3 className="text-xl font-bold font-heading text-gray-700">24oz Water Bottle</h3>
+              <p className="text-gray-500">Simple Modern</p>
             </div>
             <span className="text-2xl font-bold font-heading text-red-500">$29.89</span>
           </div>

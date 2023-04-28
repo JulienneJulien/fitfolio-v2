@@ -71,12 +71,12 @@ function ProductList() {
     <div className="flex flex-wrap -mx-4 justify-between">
       <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 px-4 mb-6 lg:mb-0">
         <div className="py-12 px-2 rounded-md shadow-2xl">
-          <img className="mx-auto h-6" src="UnderArmourLogo.png" alt=""/>
+          <img className="mx-auto h-6" src="/UnderArmourLogo.png" alt=""/>
         </div>
       </div>
       <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 px-4 mb-6 lg:mb-0">
         <div className="py-12 px-2 rounded-md shadow-2xl">
-          <img className="mx-auto h-6" src="AdidasLogo.png" alt=""/>
+          <img className="mx-auto h-6" src="/AdidasLogo.png" alt=""/>
         </div>
       </div>
       <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 px-4 mb-6 lg:mb-0">
