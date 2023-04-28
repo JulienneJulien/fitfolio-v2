@@ -31,16 +31,16 @@ function index({post: {id, body, createdAt, username,likeCount, likes, commentCo
        icon='heart' basic
        label={{ as: 'a', basic: true }}
        labelPosition='right'>
-        <Label onClick={commentOnPost}> 
+      </Button>
+      <Label basic onClick={likePost}> 
           {likeCount}
         </Label>
-      </Button>
         <Button basic>
           <Icon name='comments' />
+        </Button>
         <Label basic onClick={commentOnPost}> 
           {commentCount}
         </Label>
-        </Button>
       
     </Card.Content>
   </Card>
