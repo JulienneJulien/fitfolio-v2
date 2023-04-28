@@ -8,6 +8,12 @@ const FitShop = () => {
   // const Products=[
   //   {name: "Bike", description: "Shiny bike"}
   // ]
+  const Products=[
+    // {id: 1, name: "FitFolio Logo Hat", price: "29.89", discount: "33.69", status: "Sale!", imgUrl: "/logoHat.png" }, 
+    // {id: 2, name: "2020 Canyon AeroRoad SL Bicycle", price: "6,034.91", discount: "7,099.90", status: "Sale!", imgUrl: "" }, 
+    // {id: 3, name: "Steph Curry special edition basketball", price: "34.89", discount: "40.12", status: "Sale!", imgUrl: "" }, 
+    // {id: 4, name: "Simple Modern 24oz bottle", price: "29.99", discount: "33.69", status: "Sale!", image: "" }, 
+  ]
   return (
     <div className="container">
       <CategoryMenu />
@@ -29,7 +35,6 @@ const FitShop = () => {
         <div className="p-6 bg-orange-50">
           <span className="px-2 py-1 text-xs font-bold font-heading border-2 border-red-500 rounded-full text-red-500 bg-white">-15%</span>
           <a className="block px-6 mt-6 mb-2" href="#">
-
             <img className="mb-5 mx-auto h-56 w-full object-contain" src="/logoHat.png" alt=""/>
             <h3 className="mb-2 text-xl text-gray-700 font-bold font-heading">FitFolio Logo Hat</h3>
             <p className="text-lg font-bold font-heading text-red-500">
@@ -66,7 +71,6 @@ const FitShop = () => {
             <h3 className="mb-2 text-xl text-gray-700 font-bold font-heading">Steph Curry special edition basketball</h3>
             <p className="text-lg font-bold font-heading text-red-500">
               <span>$34.89</span>
-              <span className="text-xs text-gray-500 font-semibold font-heading line-through">$33.69</span>
             </p>
           </a>
           <a className="ml-auto mr-2 flex items-center justify-center w-12 h-12 border rounded-lg hover:border-gray-500" href="#">
@@ -82,6 +86,67 @@ const FitShop = () => {
             <h3 className="mb-2 text-xl text-gray-700 font-bold font-heading">Simple Modern 24oz bottle</h3>
             <p className="text-lg font-bold font-heading text-red-500">
               <span>$29.99</span>
+              <span className="text-xs text-gray-500 font-semibold font-heading line-through">$33.69</span>
+            </p>
+          </a>
+          <a className="ml-auto mr-2 flex items-center justify-center w-12 h-12 border rounded-lg hover:border-gray-500" href="#">
+            <svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" width="2" height="12" fill="#161616"></rect><rect x="12" y="5" width="2" height="12" transform="rotate(90 12 5)" fill="#161616"></rect></svg>
+          </a>
+        </div>
+      </div>
+      <div className="w-full md:w-1/2 lg:w-1/4 px-3 mb-6 lg:mb-0">
+        <div className="p-6 bg-orange-50">
+          <span className="px-2 py-1 text-xs font-bold font-heading border-2 border-blue-500 rounded-full text-blue-500 bg-white">New!</span>
+          <a className="block px-6 mt-6 mb-2" href="#">
+            <img className="mb-5 mx-auto h-56 w-full object-contain" src="/NiteJogger.jpg" alt=""/>
+            <h3 className="mb-2 text-xl text-gray-700 font-bold font-heading">Adidas NiteJogger Shoes</h3>
+            <p className="text-lg font-bold font-heading text-red-500">
+              <span>$129.99</span>
+            </p>
+          </a>
+          <a className="ml-auto mr-2 flex items-center justify-center w-12 h-12 border rounded-lg hover:border-gray-500" href="#">
+            <svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" width="2" height="12" fill="#161616"></rect><rect x="12" y="5" width="2" height="12" transform="rotate(90 12 5)" fill="#161616"></rect></svg>
+          </a>
+        </div>
+      </div>
+      <div className="w-full md:w-1/2 lg:w-1/4 px-3 mb-6 lg:mb-0">
+        <div className="p-6 bg-orange-50">
+          <span className="px-2 py-1 text-xs font-bold font-heading border-2 border-gray-700 rounded-full text-gray-700 bg-white">Limited Supplies!</span>
+          <a className="block px-6 mt-6 mb-2" href="#">
+            <img className="mb-5 mx-auto h-56 w-full object-contain" src="/MMAbag.jpg" alt=""/>
+            <h3 className="mb-2 text-xl text-gray-700 font-bold font-heading">Everlast MMA Heavy Bag</h3>
+            <p className="text-lg font-bold font-heading text-red-500">
+              <span>$134.99</span>
+            </p>
+          </a>
+          <a className="ml-auto mr-2 flex items-center justify-center w-12 h-12 border rounded-lg hover:border-gray-500" href="#">
+            <svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" width="2" height="12" fill="#161616"></rect><rect x="12" y="5" width="2" height="12" transform="rotate(90 12 5)" fill="#161616"></rect></svg>
+          </a>
+        </div>
+      </div>
+      <div className="w-full md:w-1/2 lg:w-1/4 px-3 mb-6 lg:mb-0">
+        <div className="p-6 bg-orange-50">
+          <span className="px-2 py-1 text-xs font-bold font-heading border-2 border-red-500 rounded-full text-red-500 bg-white">-15%</span>
+          <a className="block px-6 mt-6 mb-2" href="#">
+            <img className="mb-5 mx-auto h-56 w-full object-contain" src="/Weights.jpg" alt=""/>
+            <h3 className="mb-2 text-xl text-gray-700 font-bold font-heading">3 piece Weight Set</h3>
+            <p className="text-lg font-bold font-heading text-red-500">
+              <span>$29.89</span>
+            </p>
+          </a>
+          <a className="ml-auto mr-2 flex items-center justify-center w-12 h-12 border rounded-lg hover:border-gray-500" href="#">
+            <svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" width="2" height="12" fill="#161616"></rect><rect x="12" y="5" width="2" height="12" transform="rotate(90 12 5)" fill="#161616"></rect></svg>
+          </a>
+        </div>
+      </div>
+      <div className="w-full md:w-1/2 lg:w-1/4 px-3 mb-6 lg:mb-0">
+        <div className="p-6 bg-orange-50">
+          <span className="px-2 py-1 text-xs font-bold font-heading border-2 border-red-500 rounded-full text-red-500 bg-white">-15%</span>
+          <a className="block px-6 mt-6 mb-2" href="#">
+            <img className="mb-5 mx-auto h-56 w-full object-contain" src="/logoHat.png" alt=""/>
+            <h3 className="mb-2 text-xl text-gray-700 font-bold font-heading">FitFolio Logo Hat</h3>
+            <p className="text-lg font-bold font-heading text-red-500">
+              <span>$29.89</span>
               <span className="text-xs text-gray-500 font-semibold font-heading line-through">$33.69</span>
             </p>
           </a>
