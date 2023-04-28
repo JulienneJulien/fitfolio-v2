@@ -148,7 +148,7 @@ const Cart = () => {
                 <div className="flex -mx-4 flex-wrap items-center">
                   <div className="w-full md:w-1/3 px-4 mb-3">
                     <div className="flex items-center justify-center w-full md:w-24 h-32 bg-gray-100">
-                      <img className="h-full object-contain" src="yofte-assets/images/waterbottle.png" alt=""/>
+                      <img className="h-full object-contain" src="/SMbottle.png" alt=""/>
                     </div>
                   </div>
                   <div className="w-2/3 px-4">
@@ -180,7 +180,7 @@ const Cart = () => {
                 <div className="flex -mx-4 flex-wrap items-center">
                   <div className="w-full md:w-1/3 px-4 mb-3">
                     <div className="flex items-center justify-center w-full md:w-24 h-32 bg-gray-100">
-                      <img className="h-full object-contain" src="yofte-assets/images/basketball.png" alt=""/>
+                      <img className="h-full object-contain" src="/StephCurryBall.png" alt=""/>
                     </div>
                   </div>
                   <div className="w-full md:w-2/3 px-4">

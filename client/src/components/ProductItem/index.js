@@ -45,7 +45,7 @@ function ProductItem(item) {
         <div className="p-6 bg-orange-50">
           <span className="px-2 py-1 text-xs font-bold font-heading border-2 border-red-500 rounded-full text-red-500 bg-white">{status}</span>
           <Link className="block px-6 mt-6 mb-2" to={`/products/${_id}`}>
-            <img className="mb-5 mx-auto h-56 w-full object-contain" alt={name} src={`/images/${image}`}/>
+            <img className="mb-5 mx-auto h-56 w-full object-contain" alt={name} src={`/products/${image}`}/>
             <h3 className="mb-2 text-xl text-gray-700 font-bold font-heading">{name}</h3>
             <p className="text-lg font-bold font-heading text-red-500">
               <span>${price}</span>
