@@ -59,7 +59,7 @@ function Home() {
               <div>
                 <label htmlFor="body">Body:</label>
                 <textarea
-                  id="body"
+                  id="body" class="withd-500px"
                   value={body}
                   onChange={(event) => setBody(event.target.value)}
                 ></textarea>
