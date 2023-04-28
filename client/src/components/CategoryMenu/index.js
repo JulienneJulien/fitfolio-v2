@@ -42,7 +42,17 @@ function CategoryMenu() {
   };
 
   return (
+    
     <section className="py-20 overflow-x-hidden">
+      <div className="flex flex-wrap justify-center -mx-3">
+      <div className=" px-3 mb-6">
+        <div className="h-700 p-6 md:p-12 border">
+          <div className="flex items-center">
+      <img className="mb-3 mx-auto h-700" src="Header-background.gif" alt=""/>
+      </div>
+      </div>
+      </div>
+      </div>
   <div className="container mx-auto px-4">
     <div className="flex flex-wrap justify-center -mx-3">
       <div className="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
@@ -133,12 +143,10 @@ function CategoryMenu() {
     </div>
   </div>
 
-
-
     <div>
       
       {categories.map((item) => (
-        <button
+        <button className = "mt-10 mx-auto"
           key={item._id}
           onClick={() => {
             handleClick(item._id);
