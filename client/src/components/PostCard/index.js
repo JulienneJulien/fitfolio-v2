@@ -4,14 +4,8 @@ import {Link} from 'react-router-dom';
 
 function index({post: {id, body, createdAt, username,likeCount, likes, commentCount}}) {
 
-  function LikeButton() {
-    const [liked, setLiked] = useState(false);
-    const [likeCount, setLikeCount] = useState(0);
-  
-    const likePost = () => {
-      setLiked(!liked);
-      setLikeCount(liked ? likeCount - 1 : likeCount + 1);
-    };
+  function likePost() {
+console.log('liked post')
   }
 
   function commentOnPost(){
@@ -32,17 +26,7 @@ function index({post: {id, body, createdAt, username,likeCount, likes, commentCo
       <Card.Description>{body}</Card.Description>
     </Card.Content>
     <Card.Content extra>
-    <Button
-      onClick={LikeButton}
-      icon='heart'
-      basic={!liked}
-      color={liked ? 'red' : null}
-      label={{ as: 'a', basic: true }}
-      labelPosition='right'
-    >
-      <Label onClick={likePost}>{likeCount}</Label>
-    </Button>
-      {/* <Button 
+      <Button 
         onClick={likePost}
        icon='heart' basic
        label={{ as: 'a', basic: true }}
