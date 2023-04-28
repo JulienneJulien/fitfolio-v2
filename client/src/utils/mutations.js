@@ -52,23 +52,12 @@ export const ADD_USER = gql`
   }
 `;
 
-// export const CREATE_POST = gql`
-//   mutation createPost(
-//     $id: ID!
-//     $createdAt: String!
-//     $username: String!
-//     $body: String!
-//   ) {
-//     createPost(
-//     id: $ID
-//     createdAt: $createdAt
-//     username: $username
-//     body: $body{
-//       ID
-//       createdAt
-//       username
-//       body
-//     }
-//     )
-//     }
-// `;
+export const CREATE_POST = gql`
+mutation Mutation($body: String!) {
+  createPost(body: $body) {
+    id
+    username
+    body
+  }
+}
+`;
