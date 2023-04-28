@@ -5,6 +5,7 @@
 ## Table of Content
 - [Fitfolio](#Fitfolio)
   - [Table of Content](#table-of-content)
+  - [Deployment](#deployment)
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
@@ -12,19 +13,31 @@
   - [Tests](#tests)
   - [License](#license)
   - [Questions](#questions)
+  
+## Deployment
+
+
 
 ## Description
-*Fitfolio is the best place to share your accomplishments in the gym, compete with your friends, and track your own progress! With this application, you can make posts, comment on others' posts, and keep an inventory of your workouts so you can remember what worked, what sucked, and what else you can do.* 
+*Fitfolio is the best place to share your accomplishments in the gym, compete with your friends, and track your own progress! With this application, you can make posts, comment on others' posts, and keep an inventory of your workouts so you can remember what worked, what sucked, and what else you can do.*  ***Built with Exercisedb Api, MongoDB Database, GraphQL and  the react framework***
 
 
 
 ## Installation
 ***Please install the package locally to your working project directory.***
-  
+- On your preferred code editor, use the command line to run `npm i`
+- The latest version of the required packages will be installed.
 
 ## Usage
 ***Please ensure you have followed above steps to install package first!***
-- Access 
+- Access your working directory project folder.
+- On your preferred code editor, use the command line to run
+
+`npm run develop`
+
+ Runs the app in the development mode for both frontend and backend concurrently: 
+- Automatically seeds your database.
+- You may also see any lint errors in the console.
 
 ***See the images and video below for demo.***
 
