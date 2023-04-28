@@ -27,6 +27,13 @@ function Home() {
   }
   const handleSubmit = (event) => {
     event.preventDefault();
+    fetch('/api/posts',{
+      method: 'POST',
+      body: JSON.stringify({
+        title,
+        body
+      })
+    })
     // Add logic to submit the post
     // using a GraphQL mutation
     console.log(event);
@@ -39,7 +46,7 @@ function Home() {
     <Grid columns={3}>
       <div class="flex-column justify-content-center" id='feedDiv'>
             <h2>Create a new post</h2>
-            <form class=" flex-column justify-content-center" id="feed-form" onSubmit={handleSubmit}>
+            <form class=" flex-column justify-content-center" id="feed-form">
               <div>
                 <label htmlFor="title">Title:</label>
                 <input
@@ -57,7 +64,7 @@ function Home() {
                   onChange={(event) => setBody(event.target.value)}
                 ></textarea>
               </div>
-              <button id='button' type="submit">Submit</button>
+              <button id='button' data-testid='button' class="btn btn-outline-dark mt-4" type="submit" onSubmit={handleSubmit}>Submit</button>
             </form>
           </div>
     <Grid.Row className="page-title">
