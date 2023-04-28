@@ -30,9 +30,9 @@ function Home() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      console.log('TEST', body)
+      console.log('TEST', body, title)
       const mutationResponse = await createPost({
-        variables: { body: body },
+        variables: { body: body , title: title},
       });
     } catch (e) {
       console.log(e);
@@ -54,7 +54,7 @@ function Home() {
               <div>
                 <label htmlFor="title">Title:</label>
                 <input
-                  type="text"
+                 
                   id="title"
                   value={title}
                   onChange={(event) => setTitle(event.target.value)}

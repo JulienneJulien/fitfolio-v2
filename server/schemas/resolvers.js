@@ -97,12 +97,13 @@ const resolvers = {
     }
   },
   Mutation: {
-    async createPost(_, { body} , user, args, username, context){
-    console.log("Username goes here", user.id);
+    async createPost(_, { body,title,user}, args, username, context){
+    console.log("Username goes here", user);
       const newPost = new Post({
         body,
-        user:user.id,
-        username:user.username,
+        title,
+        user:user,
+        username:user,
         createdAt: new Date().toDateString()
       });
       const post = await newPost.save();

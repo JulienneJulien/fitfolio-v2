@@ -3,7 +3,7 @@ import { Icon, Label, Card, Image, Button} from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
 import DeletePost from './DeletePost';
 
-function index({post: {id, body, createdAt, username,likeCount, likes, commentCount}}) {
+function index({post: {id, body, createdAt, username,likeCount,title, likes, commentCount}}) {
 
   function likePost() {
 console.log('liked post')
@@ -24,6 +24,7 @@ console.log('liked post')
       />
       <Card.Header>{username}</Card.Header>
       <Card.Meta as={Link} to={`/posts/${id}`}>{createdAt}</Card.Meta>
+      <Card.Description>{title}</Card.Description>
       <Card.Description>{body}</Card.Description>
     </Card.Content>
     <Card.Content extra>

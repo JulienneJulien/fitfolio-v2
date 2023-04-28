@@ -46,6 +46,7 @@ const typeDefs = gql`
   type Post {
     id: ID!
     body: String!
+    title: String!
     createdAt: String!
     username: String
     comments: [Comment]!
@@ -88,7 +89,7 @@ type Like{
     updateUser(firstName: String, lastName: String, email: String, password: String): User
     updateProduct(_id: ID!, quantity: Int!): Product
     login(email: String!, password: String!): Auth
-    createPost(body:String!): Post!
+    createPost(body:String!, title:String!, username:String): Post!
     deletePost(postId:ID): String!
     updatePost(postId:String!, body:String): Post!
     createComment(postId: String!, body:String!): Post!
