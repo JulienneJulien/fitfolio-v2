@@ -5,30 +5,26 @@ import Cart from "../components/Cart";
 import ProductItem from "../components/ProductItem";
 // need to import getProducts query - call query to get all products and map each product object through the product item component.
 const FitShop = () => {
-  const Products=[
-    {id: 1, name: "FitFolio Logo Hat", price: "29.89", discount: "33.69", status: "Sale!", imgUrl: "/logoHat.png" }, 
-    {id: 2, name: "2020 Canyon AeroRoad SL Bicycle", price: "6,034.91", discount: "7,099.90", status: "Sale!", imgUrl: "" }, 
-    {id: 3, name: "Steph Curry special edition basketball", price: "34.89", discount: "40.12", status: "Sale!", imgUrl: "" }, 
-    {id: 4, name: "Simple Modern 24oz bottle", price: "29.99", discount: "33.69", status: "Sale!", image: "" }, 
-  ]
+  // const Products=[
+  //   {name: "Bike", description: "Shiny bike"}
+  // ]
   return (
     <div className="container">
       <CategoryMenu />
       <ProductList />
       <Cart />
-     
+      {/* {Products.map((product) =>{
+        return (
+          <div>
+            <ProductItem name = {product.name} description = {product.description} />
+          </div>
+        )
+      }} */}
 
       {/* <section className="py-20 bg-orange-200">
   <div className="container mx-auto px-4">
     <h2 className="mb-16 md:mb-24 text-4xl md:text-5xl text-gray-700 font-bold font-heading">Discover our products!</h2>
     <div className="flex flex-wrap -mx-3 mb-24">
-    { Products.map((product) =>{
-        return (
-          <div>
-            <ProductItem name = {product.name} price = {product.price} image = {product.imgUrl} discount = {product.discount} status = {product.status}/>
-          </div>
-        )
-      })} 
       <div className="w-full md:w-1/2 lg:w-1/4 px-3 mb-6 lg:mb-0">
         <div className="p-6 bg-orange-50">
           <span className="px-2 py-1 text-xs font-bold font-heading border-2 border-red-500 rounded-full text-red-500 bg-white">-15%</span>
@@ -95,6 +91,9 @@ const FitShop = () => {
         </div>
       </div>
     </div>
+    <div className="text-center">
+      <a className="inline-block bg-orange-300 hover:bg-orange-400 hover:text-gray-700 text-white font-bold font-heading py-6 px-8 rounded-md uppercase" href="#">Show More</a>
+    </div>
   </div>
 </section>
 
@@ -144,4 +143,3 @@ const FitShop = () => {
 };
 
 export default FitShop;
-

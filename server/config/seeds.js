@@ -123,7 +123,16 @@ db.once('open', async () => {
       image: 'alphabet-blocks.jpg',
       price: 9.99,
       quantity: 600
-    }
+    },
+    {
+      name: 'FitFolio Hat',
+      category: categories[4]._id,
+      description:
+        'Vestibulum et erat finibus erat suscipit vulputate sed vitae dui. Ut laoreet tellus sit amet justo bibendum ultrices. Donec vitae felis vestibulum, congue augue eu, finibus turpis.',
+      image: 'logoHat.png',
+      price: 29.89,
+      quantity: 350
+    },
   ]);
 
   console.log('products seeded');

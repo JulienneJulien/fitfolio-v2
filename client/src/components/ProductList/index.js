@@ -56,9 +56,7 @@ function ProductList() {
               image={product.image}
               name={product.name}
               price={product.price}
-              discount={product.discount}
               quantity={product.quantity}
-              status={product.status}              
             />
           ))}
         </div>
@@ -66,6 +64,7 @@ function ProductList() {
         <h3>You haven't added any products yet.</h3>
       )}
       {loading ? <img src={spinner} alt="loading" /> : null}
+      
       <section className="py-20">
   <div className="container mx-auto px-4">
     <h2 className="mb-8 text-sm font-bold font-heading text-gray-400">TRUSTED BY BRANDS ALL OVER THE WORLD</h2>
