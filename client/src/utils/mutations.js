@@ -61,3 +61,10 @@ mutation Mutation($body: String!) {
   }
 }
 `;
+
+
+export const DELETE_POST = gql`
+mutation Mutation($postId: ID!) {
+  deletePost(postId: $postId) 
+}
+`;
