@@ -1,5 +1,5 @@
 const { AuthenticationError, UserInputError } = require('apollo-server-express');
-const { User, Product, Category, Order, Post } = require('../models');
+const { User, Product, Category, Order, Post, Exercise } = require('../models');
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
@@ -8,7 +8,13 @@ const resolvers = {
     getAllPosts: async () => { 
       return await Post.find();
     },
-    getPost: async (_, {postId}) => {
+    getPost: async (_, {exerciseId}) => {
+      return await Exercise.findById(exerciseId);
+    },
+    getAllExercises: async () => { 
+      return await Exercise.find();
+    },
+    getExercise: async (_, {postId}) => {
       return await Post.findById(postId);
     },
    
@@ -186,6 +192,17 @@ likePost: async (_, {postId, username}, context) => {
       } else
           throw new UserInputError('No post was found');
 
+},
+
+
+saveExercise: async (_, {exerciseId}, user, username, context) => {
+  const exercise = await Exercise.findById(exerciseId);
+  if(user.username === exercise.username) {
+    await Exercise.findByIdAndSave(exerciseId, user)
+    return "You have successfully saved this exercise";
+  } else {
+ throw Error('No exercise was found')
+  } 
 },
 
 

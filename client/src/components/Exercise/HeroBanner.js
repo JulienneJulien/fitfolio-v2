@@ -41,7 +41,11 @@ function HeroBanner() {
 
         <Typography color='#232F3E'  fontWeight={800} fontSize="30px" mb={3}>Explore some of our available workouts for a few pointers!</Typography>
 
-        <Button variant='contained' color='error' href="#exercises" sx={{ backgroundColor: '#232F3E'}}>Explore Now</Button>
+        <Button variant='contained' color='error' href="#exercises" sx={{ backgroundColor: '#232F3E'}} onClick={() => {
+      
+            window.scrollTo({top:1500, left: 100, behavior: 'smooth'})
+          }
+          }>Explore Now</Button>
         
           <img className='runner' src={Runner}  width="700" height="550" alt="banner"  />
 
