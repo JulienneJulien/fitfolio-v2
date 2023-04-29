@@ -175,8 +175,7 @@ input:focus {
 }
 
 .px-1 {
-  padding-right: var(--spacing-one);
-  padding-left: var(--spacing-one);
+  padding:3rem;
 }
 
 .px-2 {

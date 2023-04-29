@@ -20,6 +20,7 @@ import { StoreProvider } from './utils/GlobalState';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
 import FitFeed from './pages/FitFeed';
+import SingleUserFeed from './components/PostCard/SingleUserFeed'
 import FitShop from './pages/FitShop';
 import Contact from './pages/Contact'
 
@@ -73,6 +74,10 @@ function App() {
               <Route 
                 path="/fitfeed" 
                 element={<FitFeed/>} 
+              />
+               <Route 
+                path="/posts/:postId" 
+                element={<SingleUserFeed/>} 
               />
                 <Route 
                 path="/fitshop" 

@@ -2,6 +2,7 @@ import { useState, React } from 'react'
 import { Icon, Label, Card, Image, Button} from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
 import DeletePost from './DeletePost';
+import '../../styles/PostCards.css';
 
 function index({post: {id, body, createdAt, username,likeCount,title, likes, commentCount}}) {
 
@@ -15,8 +16,9 @@ console.log('liked post')
 
 
   return (
-    <Card fluid>
-    <Card.Content>
+  <div className='containerPosts'>
+    <Card className='postCards' fluid >
+    <Card.Content as={Link} to={`/posts/${id}`}>
       <Image
         floated='right'
         size='mini'
@@ -43,10 +45,12 @@ console.log('liked post')
         <Label basic onClick={commentOnPost}> 
           {commentCount}
         </Label>
+       <Button/> 
         <DeletePost postId={id}/>
     </Card.Content>
 
   </Card>
+  </div>
   )
 }
 
