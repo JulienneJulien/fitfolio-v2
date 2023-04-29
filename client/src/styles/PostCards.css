@@ -1,0 +1,73 @@
+body {
+    background-color: #d9dcd6;
+}
+
+.containerPosts {
+    display :flex;
+    flex-direction: row;
+    width:100%;
+    height:auto;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.postCards a {
+    text-decoration: none;
+    color: #232F3E;
+}
+
+.postCards, .ui.card {
+    box-shadow: 0px 1px 15px #232F3E;
+    background-color: white;
+    border: 3px solid darkgoldenrod;
+    text-decoration: none;
+    width: 20%;
+    box-sizing: border-box;
+}
+
+.ui.grid>.row {
+    margin: 2rem;
+    padding: 2rem;
+}
+.ui.card {
+    margin: 3em;
+}
+
+h1.ui.header{ 
+    font-size: 5rem;
+    text-align: center;
+    color: darkgoldenrod ;
+}
+.ui.header:first-child {
+    margin-top: 1rem;
+}
+
+.userFeedPage {
+    margin: 4rem;
+    padding: 4rem;   
+}
+
+.ui.large.feed {
+    font-size: 1.9rem;
+}
+
+@media screen and  (max-width: 1200px) {
+    .ui.grid>.row>.column {
+        display: contents;
+    }
+    .ui.card {
+        margin: 3em;
+    }
+    .ui.grid>.row {
+       gap:2em;
+    }
+    h1.ui.header{ 
+        font-size: 2rem;
+        text-align: center;
+        color: darkgoldenrod ;
+    }
+    .ui.large.feed {
+        font-size: 1.5rem;
+    }
+}
+

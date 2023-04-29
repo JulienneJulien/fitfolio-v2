@@ -1,8 +1,10 @@
 import { useState, React } from 'react'
 import { Icon, Label, Card, Image, Button} from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
+import DeletePost from './DeletePost';
+import '../../styles/PostCards.css';
 
-function index({post: {id, body, createdAt, username,likeCount, likes, commentCount}}) {
+function index({post: {id, body, createdAt, username,likeCount,title, likes, commentCount}}) {
 
   function likePost() {
 console.log('liked post')
@@ -14,15 +16,17 @@ console.log('liked post')
 
 
   return (
-    <Card fluid>
-    <Card.Content>
+  <div className='containerPosts'>
+    <Card className='postCards' fluid >
+    <Card.Content as={Link} to={`/posts/${id}`}>
       <Image
         floated='right'
         size='mini'
-        src='https://www.bsn.eu/wp-content/uploads/2016/12/user-icon-image-placeholder-300-grey.jpg'
+        src='https://p7.hiclipart.com/preview/247/564/869/computer-icons-user-profile-clip-art-user-avatar.jpg'
       />
       <Card.Header>{username}</Card.Header>
       <Card.Meta as={Link} to={`/posts/${id}`}>{createdAt}</Card.Meta>
+      <Card.Description>{title}</Card.Description>
       <Card.Description>{body}</Card.Description>
     </Card.Content>
     <Card.Content extra>
@@ -35,15 +39,18 @@ console.log('liked post')
       <Label basic onClick={likePost}> 
           {likeCount}
         </Label>
-        <Button basic>
+        <Button basic as={Link} to={`/posts/${id}`}>
           <Icon name='comments' />
         </Button>
         <Label basic onClick={commentOnPost}> 
           {commentCount}
         </Label>
-      
+       <Button/> 
+        <DeletePost postId={id}/>
     </Card.Content>
+
   </Card>
+  </div>
   )
 }
 

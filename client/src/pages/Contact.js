@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { validateEmail } from '../utils/helpers';
+import { Header} from 'semantic-ui-react';
 import "../styles/Contact.css";
 
 function Contact() {
@@ -37,8 +38,8 @@ function Contact() {
     return (
        
         <div class="flex-column justify-content-center" id='contactDiv'>
-          <h2 className='titleNavsPage'>Contact</h2> 
-          <p><b><i>Please contact us!</i></b></p>
+          <Header as='h1' className='titleNavsPage'>Contact</Header> 
+          <h1><b><i>Please contact us!</i></b></h1>
 
           <form class=" flex-column justify-content-center" id="contact-form"   >
               <div>

@@ -46,12 +46,19 @@ const typeDefs = gql`
   type Post {
     id: ID!
     body: String!
+    title: String!
     createdAt: String!
     username: String
     comments: [Comment]!
     likes: [Like]!
     likeCount: Int
     commentCount: Int
+  }
+
+  type Exercise {
+    id: ID!
+    title: String!
+    createdAt: String!
   }
 
   type Comment{
@@ -81,6 +88,11 @@ type Like{
     getPost(postId: ID!): Post
   }
 
+  type Query {
+    getAllExercises: [Exercise]
+    getExercise(exerciseId: ID!): Exercise
+  }
+
 
   type Mutation {
     addUser(firstName: String!, lastName: String!, username: String!, email: String!, password: String!): Auth
@@ -88,8 +100,9 @@ type Like{
     updateUser(firstName: String, lastName: String, email: String, password: String): User
     updateProduct(_id: ID!, quantity: Int!): Product
     login(email: String!, password: String!): Auth
-    createPost(body:String!): Post!
+    createPost(body:String!, title:String!, username:String): Post!
     deletePost(postId:ID): String!
+    saveExercise(exerciseId: ID!): String!
     updatePost(postId:String!, body:String): Post!
     createComment(postId: String!, body:String!): Post!
     deleteComment(postId: ID!, commentId:ID!): Post!

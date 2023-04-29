@@ -2,7 +2,7 @@
 import { useState, React } from 'react'
 import { useQuery, useMutation } from '@apollo/client'
 import {GET_ALL_POSTS} from '../utils/queries';
-import {Grid, Transition} from 'semantic-ui-react';
+import {Grid, Transition, Header} from 'semantic-ui-react';
 import PostCard from '../components/PostCard/index';
 import spinner from '../assets/spinner.gif';
 import "../styles/FitFeed.css"
@@ -30,9 +30,9 @@ function Home() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      console.log('TEST', body)
+      console.log('TEST', body, title)
       const mutationResponse = await createPost({
-        variables: { body: body },
+        variables: { body: body , title: title},
       });
     } catch (e) {
       console.log(e);
@@ -48,13 +48,14 @@ function Home() {
 
     // <div>HI</div>
     <Grid columns={3}>
+      <Header as='h2'> Celebrate your achievements, no matter how small! <br></br> Flip back to the start of your training diary and appreciate how far you’ve come! <br></br> Don’t give up! You’re worth the effort!</Header>
       <div className="flex-column justify-content-center" id='feedDiv'>
-            <h2>Create a new post</h2>
+            <Header as='h2' >Create a new post</Header>
             <form className=" flex-column justify-content-center" id="feed-form">
               <div>
                 <label htmlFor="title">Title:</label>
                 <input
-                  type="text"
+                 
                   id="title"
                   value={title}
                   onChange={(event) => setTitle(event.target.value)}
@@ -72,7 +73,7 @@ function Home() {
             </form>
           </div>
     <Grid.Row className="page-title">
-      <h1 className="flex-column justify-content-center" id='feedDiv'>Recent Posts</h1>
+      <Header as='h2' className="flex-column justify-content-center" id='feedDiv'>Our FitFeed</Header>
     </Grid.Row>
     <Grid.Row>
       {loading ? (

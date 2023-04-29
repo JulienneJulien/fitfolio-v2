@@ -53,11 +53,19 @@ export const ADD_USER = gql`
 `;
 
 export const CREATE_POST = gql`
-mutation Mutation($body: String!) {
-  createPost(body: $body) {
+mutation Mutation($body: String!, $title: String!) {
+  createPost(body: $body, title: $title) {
     id
     username
     body
+    title
   }
+}
+`;
+
+
+export const DELETE_POST = gql`
+mutation Mutation($postId: ID!) {
+  deletePost(postId: $postId) 
 }
 `;

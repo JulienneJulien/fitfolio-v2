@@ -6,6 +6,7 @@ import { useQuery } from '@apollo/client';
 import { QUERY_PRODUCTS } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 import spinner from '../../assets/spinner.gif';
+import {Link} from 'react-router-dom';
 
 function ProductList() {
   const [state, dispatch] = useStoreContext();
@@ -147,32 +148,32 @@ function ProductList() {
     <div className="flex flex-wrap -mx-4 justify-between">
       <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 px-4 mb-6 lg:mb-0">
         <div className="py-12 px-2 rounded-md shadow-2xl">
-          <img className="mx-auto h-6" src="/UnderArmourLogo.png" alt=""/>
+          <a href='https://www.underarmour.com/en-us/?cid=PS_DG_US_11260_8NJ3ILEPHM_under+armour+website_p51796891067&gclid=Cj0KCQjw3a2iBhCFARIsAD4jQB08o1awkh8BUgxnOIaGlhz0lRRfROudihLrQHWuEL9FhrDF10UYC2saAqH9EALw_wcB&gclsrc=aw.ds'><img className="mx-auto h-6" src="/UnderArmourLogo.png" alt="UnderArmourLogo" /></a>
         </div>
       </div>
       <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 px-4 mb-6 lg:mb-0">
         <div className="py-12 px-2 rounded-md shadow-2xl">
-          <img className="mx-auto h-6" src="/AdidasLogo.png" alt=""/>
+          <a href='https://www.adidas.com/us?af_channel=Search&af_click_lookback=30d&af_reengagement_window=30d&c=Trademark-General-B-1&cm_mmc=AdieSEM_Google-_-Trademark-General-B-1-_-Trademark-Online-X-General-Phrase-_-43700072763786791&cm_mmca1=US&cm_mmca2=&ds_agid=58700007995799540&gclid=Cj0KCQjw3a2iBhCFARIsAD4jQB32D4zXFwPYFlKfk-3Bh0ZiJgkOBTa80KtuLxkUMRbSN1ISU3xOmNYaAkR7EALw_wcB&gclsrc=aw.ds&is_retargeting=true&pid=googleadwords_temp'><img className="mx-auto h-6" src="/AdidasLogo.png" alt="AdidasLogo"/></a>
         </div>
       </div>
       <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 px-4 mb-6 lg:mb-0">
         <div className="py-12 px-2 rounded-md shadow-2xl">
-          <img className="mx-auto h-6" src="PumaLogo.png" alt=""/>
+          <a href='https://us.puma.com/us/en'><img className="mx-auto h-6" src="PumaLogo.png" alt="PumaLogo"/></a>
         </div>
       </div>
       <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 px-4 mb-6 md:mb-0">
         <div className="py-12 px-2 rounded-md shadow-2xl">
-          <img className="mx-auto h-6" src="NikeLogo.png" alt=""/>
+          <a href='https://www.nike.com/'><img className="mx-auto h-6" src="NikeLogo.png" alt="NikeLogo"/></a>
         </div>
       </div>
       <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 px-4 mb-6 md:mb-0">
         <div className="py-12 px-2 rounded-md shadow-2xl">
-          <img className="mx-auto h-6" src="NorthFaceLogo.png" alt=""/>
+          <a href='https://www.thenorthface.com/en-us'><img className="mx-auto h-6" src="NorthFaceLogo.png" alt="NorthFaceLogo"/></a>
         </div>
       </div>
       <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 px-4">
         <div className="py-12 px-2 rounded-md shadow-2xl">
-          <img className="mx-auto h-6" src="EAlogo.jpg" alt=""/>
+          <a href='https://www.ea.com/en-gb/sports'><img className="mx-auto h-6" src="EAlogo.jpg" alt="EAlogo"/></a>
         </div>
       </div>
     </div>
