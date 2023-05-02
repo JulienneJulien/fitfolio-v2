@@ -15,7 +15,7 @@
   - [Questions](#questions)
   
 ## Deployment
-
+https://fitfolio-v2.herokuapp.com/
 
 
 ## Description
@@ -39,9 +39,17 @@
 - Automatically seeds your database.
 - You may also see any lint errors in the console.
 
-***See the images and video below for demo.***
+***See the images below for demo.***
 
-ADD IMAGES/VID HERE
+![screencapture-fitfolio-v2-herokuapp-2023-05-01-23_28_50](https://user-images.githubusercontent.com/117052258/235573625-15fd954c-5cf6-4ee5-951b-a7e27fcd578f.png)
+
+![screencapture-fitfolio-v2-herokuapp-fitshop-2023-05-01-23_29_18](https://user-images.githubusercontent.com/117052258/235573637-24dd1926-07a5-449e-86f8-b52016f570a3.png)
+
+
+![screencapture-localhost-4000-posts-6441b5afd324306596dacc8b-2023-05-01-21_28_47](https://user-images.githubusercontent.com/117052258/235573421-ff2ec254-57bb-42c3-818d-c05178aa50c7.png)
+
+![screencapture-localhost-4000-fitfeed-2023-05-01-21_28_19](https://user-images.githubusercontent.com/117052258/235573430-66a5f46a-ea87-4144-8ae0-a0776064ea92.png)
+
 
 
 ## Contributing
